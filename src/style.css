@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    font-family: 'Work Sans', sans-serif;
+    color: #1a1a1a;
+    background-color: #fafaf9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Chewy', cursive;
+  }
+
+  ::selection {
+    background-color: #6DCBB3;
+    color: #1a1a1a;
+  }
+
+  /* Focus visible ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid #6DCBB3;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Remove focus ring for mouse users */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-5xl mx-auto px-6 sm:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Skip to content link - visually hidden until focused */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 100;
+    padding: 0.75rem 1.5rem;
+    background: #6DCBB3;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: top 0.2s;
+  }
+
+  .skip-link:focus {
+    top: 0;
+    outline: 3px solid #fff;
+    outline-offset: -2px;
+  }
+
+  /* Reduced motion for transitions */
+  @media (prefers-reduced-motion: reduce) {
+    .skip-link {
+      transition: none;
+    }
+  }
+}
