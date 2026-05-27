@@ -45,7 +45,7 @@ const variantClasses = {
   <button
     :type="type"
     :disabled="disabled || loading"
-    class="inline-flex items-center justify-center gap-2.5 rounded-full font-body font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+    class="inline-flex items-center justify-center gap-2.5 rounded-full font-body font-semibold transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed active:scale-[0.97]"
     :class="[sizeClasses[size], variantClasses[variant]]"
     @click="emit('click')"
   >

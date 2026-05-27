@@ -9,6 +9,9 @@ const activeSection = ref('hero')
 const sections = [
   { id: 'hero', label: 'Inicio' },
   { id: 'about', label: 'Nosotros' },
+  { id: 'concurso', label: 'Concurso' },
+  { id: 'proyectos', label: 'Proyectos' },
+  { id: 'voluntariado', label: 'Voluntariado' },
   { id: 'contacto', label: 'Contacto' },
 ]
 
@@ -72,7 +75,7 @@ const mobileToggleLabel = computed(() => isOpen.value ? 'Cerrar menú' : 'Abrir 
         <div v-if="isOpen" id="mobile-menu" class="bg-black border-t border-white/5 overflow-hidden" role="navigation" aria-label="Navegación móvil">
           <div class="max-w-5xl mx-auto px-6 py-4 space-y-1">
             <button v-for="s in sections" :key="s.id" @click="scrollTo(s.id)"
-              class="block w-full text-left px-4 py-3 rounded-lg text-sm transition-colors"
+              class="block w-full text-left px-4 py-3.5 rounded-lg text-sm transition-colors min-h-[44px]"
               :class="activeSection === s.id ? 'text-primary bg-primary/5' : 'text-white/60 hover:bg-white/5'">
               {{ s.label }}
             </button>

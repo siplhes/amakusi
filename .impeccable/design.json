@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-27T00:00:00.000Z",
+  "title": "Design System: Ama Kusi",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Spring Teal", "canonical": "oklch(0.78 0.12 175)", "tonalRamp": ["oklch(0.25 0.03 175)", "oklch(0.35 0.05 175)", "oklch(0.45 0.08 175)", "oklch(0.55 0.10 175)", "oklch(0.65 0.12 175)", "oklch(0.75 0.12 175)", "oklch(0.85 0.08 175)", "oklch(0.93 0.04 175)"] },
+      "cream": { "role": "neutral", "displayName": "Sunlit Cream", "canonical": "oklch(0.96 0.01 95)", "tonalRamp": ["oklch(0.20 0.005 95)", "oklch(0.35 0.005 95)", "oklch(0.50 0.005 95)", "oklch(0.65 0.005 95)", "oklch(0.78 0.008 95)", "oklch(0.86 0.01 95)", "oklch(0.93 0.01 95)", "oklch(0.97 0.01 95)"] },
+      "dark": { "role": "neutral", "displayName": "Dark Earth", "canonical": "oklch(0.25 0.02 55)", "tonalRamp": ["oklch(0.12 0.01 55)", "oklch(0.18 0.015 55)", "oklch(0.25 0.02 55)", "oklch(0.35 0.02 55)", "oklch(0.45 0.02 55)", "oklch(0.55 0.015 55)", "oklch(0.70 0.01 55)", "oklch(0.85 0.005 55)"] },
+      "desert-sand": { "role": "accent", "displayName": "Desert Sand", "canonical": "oklch(0.72 0.06 70)", "tonalRamp": ["oklch(0.20 0.02 70)", "oklch(0.30 0.03 70)", "oklch(0.42 0.04 70)", "oklch(0.55 0.05 70)", "oklch(0.65 0.06 70)", "oklch(0.75 0.06 70)", "oklch(0.85 0.04 70)", "oklch(0.93 0.02 70)"] },
+      "desert-copper": { "role": "accent", "displayName": "Desert Copper", "canonical": "oklch(0.58 0.10 55)", "tonalRamp": ["oklch(0.15 0.03 55)", "oklch(0.25 0.05 55)", "oklch(0.38 0.08 55)", "oklch(0.48 0.10 55)", "oklch(0.58 0.10 55)", "oklch(0.68 0.08 55)", "oklch(0.78 0.05 55)", "oklch(0.88 0.03 55)"] },
+      "desert-rust": { "role": "accent", "displayName": "Desert Rust", "canonical": "oklch(0.38 0.08 40)", "tonalRamp": ["oklch(0.10 0.03 40)", "oklch(0.18 0.05 40)", "oklch(0.28 0.07 40)", "oklch(0.38 0.08 40)", "oklch(0.48 0.07 40)", "oklch(0.58 0.05 40)", "oklch(0.68 0.03 40)", "oklch(0.80 0.02 40)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display / Kicker", "purpose": "Section kickers, metadata labels. Always uppercase with wide tracking." },
+      "heading": { "displayName": "Heading (Chewy)", "purpose": "All headlines from hero to card titles. Friendly, rounded cursive." },
+      "body": { "displayName": "Body (Work Sans)", "purpose": "Paragraphs, descriptions, running text. Max 75ch line length." },
+      "label": { "displayName": "Label (Sora)", "purpose": "Small UI labels, form labels, metadata." }
+    },
+    "motion": [
+      { "name": "ease-reveal", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Scroll-triggered section reveals. Ease-out-expo curve for natural deceleration." },
+      { "name": "duration-reveal", "value": "700ms", "purpose": "Duration for scroll reveal animations." },
+      { "name": "ease-hover", "value": "cubic-bezier(0.25, 1, 0.5, 1)", "purpose": "Card hover lift transitions." },
+      { "name": "duration-hover", "value": "200ms", "purpose": "Hover state transitions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action. Used for primary actions like 'Enviar Mensaje'.",
+      "html": "<button class=\"ds-btn-primary\">Enviar Mensaje</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem; padding: 12px 28px; background: #6DCBB3; color: #352921; font-family: 'Work Sans', sans-serif; font-size: 0.875rem; font-weight: 600; border: none; border-radius: 9999px; cursor: pointer; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; } .ds-btn-primary:hover { background: #8FD9C4; transform: translateY(-2px); box-shadow: 0 4px 24px rgba(109,203,179,0.25); } .ds-btn-primary:active { transform: translateY(0); } .ds-btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "High-contrast CTA for dark or emphasis contexts.",
+      "html": "<button class=\"ds-btn-secondary\">Conócenos</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem; padding: 12px 28px; background: #352921; color: #ffffff; font-family: 'Work Sans', sans-serif; font-size: 0.875rem; font-weight: 600; border: none; border-radius: 9999px; cursor: pointer; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; } .ds-btn-secondary:hover { background: #4F3D33; transform: translateY(-2px); box-shadow: 0 4px 24px rgba(0,0,0,0.2); } .ds-btn-secondary:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Default Card",
+      "kind": "card",
+      "refersTo": "card-default",
+      "description": "Standard content container with flat appearance and subtle border separation.",
+      "html": "<div class=\"ds-card\"><h3 style=\"font-family: 'Chewy', cursive; font-size: 1.25rem; color: #352921; margin: 0 0 8px 0;\">Card Title</h3><p style=\"font-family: 'Work Sans', sans-serif; font-size: 0.875rem; color: rgba(53,41,33,0.7); line-height: 1.625; margin: 0;\">Card description text here.</p></div>",
+      "css": ".ds-card { background: #ffffff; border: 1px solid rgba(53,41,33,0.05); border-radius: 12px; padding: 24px; transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s; } .ds-card:hover { transform: translateY(-2px); box-shadow: 0 4px 24px rgba(0,0,0,0.08); }"
+    },
+    {
+      "name": "Form Input (Dark)",
+      "kind": "input",
+      "refersTo": "input-default",
+      "description": "Text input on dark backgrounds. Used in the contact form.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Tu nombre\" />",
+      "css": ".ds-input { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 14px 16px; font-family: 'Work Sans', sans-serif; font-size: 0.875rem; color: #ffffff; outline: none; transition: border-color 0.2s, background 0.2s; box-sizing: border-box; } .ds-input::placeholder { color: rgba(255,255,255,0.2); } .ds-input:focus { border-color: #6DCBB3; background: rgba(255,255,255,0.1); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Desert Oasis",
+    "overview": "Warm, grounded, and quietly vibrant. Ama Kusi's visual identity draws from the Atacama desert landscape: sunbaked earth tones meet a spring-fed teal accent that evokes unexpected life in an arid expanse. The system pairs an approachable rounded-script heading (Chewy) with a clean, reliable sans body (Work Sans), creating a voice that is friendly, trustworthy, and culturally rooted. The design explicitly rejects cold corporate minimalism, generic nonprofit beige, and SaaS-template aesthetics.",
+    "keyCharacteristics": [
+      "Warm, earth-anchored neutrals with a teal accent that surprises",
+      "Rounded, friendly geometry (generous border-radius)",
+      "Typography that mixes playful display with grounded body",
+      "Generous whitespace that breathes like the open desert",
+      "Motion that reveals calmly (fade + lift), never distracts"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "The teal primary is concentrated on interactive elements — buttons, links, icons, highlights. It should never dominate a page section as a background color. The rarity of the teal is what makes it felt.", "section": "colors" },
+      { "name": "The Desert Rule", "body": "At least one desert tone (sand, copper, gold, rust) must be visibly present in every section below the fold. The brand lives in the desert; the palette must reflect that.", "section": "colors" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Elevation (shadow + lift) appears only on interactive hover states. Never use shadows decoratively.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use desert warm tones (sand, copper, rust) as section backgrounds and accents — the brand lives in the Atacama desert",
+      "Do use the teal primary sparingly: buttons, links, icons. Its rarity is its power",
+      "Do keep spacing generous — sections need room to breathe like the desert landscape",
+      "Do alternate section backgrounds (cream → sage → cream → dark) for visual rhythm",
+      "Do respect prefers-reduced-motion — all animations must degrade gracefully",
+      "Do reveal content on scroll (fade + gentle lift) for a calm, unhurried experience"
+    ],
+    "donts": [
+      "Don't use pure black (#000) or pure white (#fff) — tint all neutrals toward the desert warm hue",
+      "Don't use side-stripe borders (border-left > 1px as accent) on cards or callouts — use full background tints instead",
+      "Don't use the hero-metric template (big number + small label + gradient accent) — express impact narratively",
+      "Don't use identical card grids with icon + heading + text repeated across sections — vary the affordance per content type",
+      "Don't use gradient text (background-clip: text) — use a single solid color",
+      "Don't center everything — left-aligned asymmetries feel more designed",
+      "Don't use bounce or elastic easing — use ease-out-expo for natural deceleration"
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 <script setup>
 import { Icon } from '@iconify/vue'
+import data from '../../../docs/data.json'
 
 const scrollTo = (id) => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -9,6 +10,9 @@ const scrollTo = (id) => {
 const links = [
   { name: 'Inicio', id: 'hero' },
   { name: 'Nosotros', id: 'about' },
+  { name: 'Concurso', id: 'concurso' },
+  { name: 'Proyectos', id: 'proyectos' },
+  { name: 'Voluntariado', id: 'voluntariado' },
   { name: 'Contacto', id: 'contacto' },
 ]
 </script>
@@ -25,7 +29,7 @@ const links = [
             <span class="font-heading text-lg text-white">Ama Kusi</span>
           </button>
           <p class="text-white/60 text-xs leading-relaxed max-w-xs">
-            Transformando vidas a través del arte, la educación y la inclusión social en las comunidades más vulnerables de Chile.
+            {{ data.about.description }}
           </p>
         </div>
         <div>
@@ -39,8 +43,9 @@ const links = [
         <div>
           <h4 class="font-heading text-sm text-white mb-4">Contacto</h4>
           <ul class="space-y-2 text-xs text-white/60">
-            <li>Calama, Región de Antofagasta, Chile</li>
-            <li><a href="mailto:contacto@fundacionamakusi.cl" class="hover:text-primary transition-colors">contacto@fundacionamakusi.cl</a></li>
+            <li>{{ data.global.location }}</li>
+            <li><a :href="'mailto:' + data.global.contact.email" class="hover:text-primary transition-colors">{{ data.global.contact.email }}</a></li>
+            <li>{{ data.global.contact.phone }}</li>
           </ul>
         </div>
       </div>

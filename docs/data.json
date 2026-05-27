@@ -1,0 +1,164 @@
+{
+  "global": {
+    "name": "Fundación Ama Kusi",
+    "tagline": "Educación y Cultura",
+    "meaning": "En Aymara significa 'la que proyecta con alegría'.",
+    "location": "Calama, Región de Antofagasta, Chile",
+    "legal": {
+      "rut": "65.256.991-9",
+      "status": "Persona Jurídica vigente desde junio 2025",
+      "registration": "Inscripción N 379820"
+    },
+    "contact": {
+      "phone": "+569 8656 7810",
+      "email": "contacto@fundacionamakusi.cl"
+    }
+  },
+  "about": {
+    "headline": "Transformando vidas desde el desierto de Atacama",
+    "description": "La Fundación Ama Kusi es un espacio de transformación social que promueve la inclusión, el desarrollo integral y la educación sostenible para niños, jóvenes y adultos mayores en situaciones de vulnerabilidad.",
+    "origin": "Ama Kusi surge del compromiso con el servicio comunitario. Durante años, sus fundadoras han liderado actividades de verano, programas de educación alternativa y acciones para personas en riesgo de exclusión. A partir de estas experiencias, se identificó la necesidad de estructurar estos esfuerzos en una organización formal que garantizara continuidad y escalabilidad. Un nombre que refleja nuestra esencia de construir futuro con esperanza.",
+    "quote": "Creemos en la planificación con propósito y en la construcción de un futuro más justo y equitativo.",
+    "mission": {
+      "text": "Ser una organización de impacto social, capaz de transformar vidas de niños, jóvenes y adultos mayores a través de programas integrales que conecten generaciones y promuevan el bienestar y el desarrollo sostenible.",
+      "pillars": [
+        { "title": "Inclusión", "subtitle": "Programas integrales para todas las edades" },
+        { "title": "Conexión", "subtitle": "Puentes intergeneracionales de cuidado" },
+        { "title": "Sostenibilidad", "subtitle": "Desarrollo con visión de largo plazo" }
+      ]
+    },
+    "vision": {
+      "text": "Crear oportunidades educativas, sociales y culturales, integrando innovación, liderazgo y una visión sostenible que fomente el crecimiento comunitario, las raíces y el respeto por los pueblos originarios y la igualdad de oportunidades.",
+      "pillars": [
+        { "title": "Educación alternativa e integradora", "icon": "ph:star-four-fill" },
+        { "title": "Liderazgo femenino y comunitario", "icon": "ph:lightbulb-fill" },
+        { "title": "Innovación", "icon": "ph:compass-fill" },
+        { "title": "Social con raíces culturales", "icon": "ph:hand-heart-fill" }
+      ]
+    },
+    "team": [
+      {
+        "name": "Dayaret Rodríguez Stuardo",
+        "role": "Directora Ejecutiva y de Alianzas Estratégicas",
+        "email": "drodriguez@fundacionamakusi.cl",
+        "description": "Relaciones externas, convenios, financiamiento y visión general",
+        "label": "Crecimiento",
+        "isFounder": true
+      },
+      {
+        "name": "Vania Erazo",
+        "role": "Directora de Operaciones y Proyectos",
+        "email": "verazo@fundacionamakusi.cl",
+        "description": "Ejecución interna, despliegue técnico y cumplimiento de compromisos en terreno",
+        "label": "Acción",
+        "isFounder": true
+      },
+      {
+        "name": "Emilia Rojas",
+        "role": "Directora de Comunicaciones y Comunidad",
+        "email": "erojas@fundacionamakusi.cl",
+        "description": "Difusión, posicionamiento de marca, redes sociales e impacto social",
+        "label": "Visibilidad",
+        "isFounder": true
+      }
+    ]
+  },
+  "contest": {
+    "title": "Dibujando el Desierto que Imaginamos",
+    "subtitle": "Concurso de dibujo infantil y juvenil",
+    "description": "Un concurso que fomenta la identidad territorial, la conciencia ambiental y el reciclaje a través de la expresión artística de niños y jóvenes de Calama.",
+    "impact": "Los dibujos ganadores se convertirán en materia prima para Talleres de Reciclaje Creativo con Adultos Mayores, cerrando un ciclo intergeneracional único.",
+    "dates": {
+      "registration": "1 de Junio al 15 de Julio 2026",
+      "award": "Primera semana de Agosto"
+    },
+    "categories": [
+      { "id": "A", "range": "5-7 años" },
+      { "id": "B", "range": "8-10 años" },
+      { "id": "C", "range": "11-14 años" },
+      { "id": "D", "range": "15-18 años" }
+    ],
+    "themes": [
+      { "name": "Tierra Viva", "description": "Naturaleza, flora, fauna y entorno" },
+      { "name": "Territorio Mágico", "description": "Lugares emblemáticos y cultura local" },
+      { "name": "Familia Raíz", "description": "Comunidad, vínculos y vida cotidiana" },
+      { "name": "Arte Libre", "description": "Expresión sin límites ni formatos" }
+    ],
+    "impactAreas": [
+      { "title": "Estimulación Cognitiva", "description": "Activa funciones psicomotrices y de memoria en la población mayor." },
+      { "title": "Integración", "description": "Los adultos mayores trabajan con el arte de las nuevas generaciones." },
+      { "title": "Sustentabilidad", "description": "Reciclaje de materiales para dar vida a los dibujos como legados." }
+    ]
+  },
+  "projects": [
+    {
+      "year": 2026,
+      "title": "Raíces Vivas: El Legado de la Memoria Familiar",
+      "description": "Objeto de legado patrimonial e interactivo diseñado para tender puentes intergeneracionales. Combina estética visual impecable con dinámicas sensibles.",
+      "longDescription": "Más que un libro, es un objeto de legado patrimonial e interactivo. A lo largo de sus secciones estructuradas, la obra combina estética visual impecable con dinámicas sensibles: sobres integrados, cartas desprendibles, desplegables y códigos que conectan el soporte físico con la memoria viva.",
+      "quote": "Nada termina aquí, lo vivido continúa en palabras que no apuran.",
+      "roadmap": [
+        { "period": "Ene - Jun", "milestone": "Diseño final" },
+        { "period": "Jul", "milestone": "Pre-producción" },
+        { "period": "Ago", "milestone": "Pre-producción" },
+        { "period": "Oct", "milestone": "Lanzamiento" }
+      ],
+      "benefits": [
+        { "title": "Envejecimiento Activo", "description": "Promueve que las personas mayores compartan su sabiduría, validando su trayectoria y fortaleciendo su rol en la familia." },
+        { "title": "Resistencia a la Inmediatez", "description": "Propone una experiencia colaborativa, pausada y táctil. Una invitación a detenerse y escucharse." },
+        { "title": "Patrimonio Afectivo", "description": "Ofrece la oportunidad de blindar la identidad familiar antes de que el tiempo borre los detalles." }
+      ],
+      "launch": "15 de Octubre 2026"
+    },
+    {
+      "year": 2026,
+      "title": "Convenio Ama Kusi y Suma+ Comunidad",
+      "description": "Programa social para visibilización de adultos mayores, contención para mujeres cuidadoras y acompañamiento para la juventud.",
+      "longDescription": "Primer contrato privado consolidado como entidad ejecutora de un programa social dentro del proyecto piloto Suma+ Comunidad, formalizado en mayo de 2026 con fase de ejecución en septiembre.",
+      "areas": [
+        { "title": "Adultos Mayores", "description": "Visibilización, integración social y envejecimiento activo con datos en tiempo real." },
+        { "title": "Mujeres Cuidadoras", "description": "Contención, redes de apoyo y valorización de su rol en la comunidad." },
+        { "title": "Juventud", "description": "Acompañamiento y mitigación de problemáticas de salud mental y depresión." }
+      ],
+      "launch": "Septiembre 2026"
+    },
+    {
+      "year": 2027,
+      "title": "Campamento de Verano y Programa de Continuidad Educativa",
+      "description": "Espacio de aprendizaje, integración y recreación con experiencias culturales, educativas y medioambientales, con encuentros quincenales a lo largo del año.",
+      "longDescription": "Esta iniciativa ofrece un espacio de aprendizaje, integración y recreación con experiencias culturales, educativas y medioambientales. Incorpora encuentros quincenales para garantizar un impacto duradero, reforzando las áreas de alfabetización digital, arte y medioambiente. Ama Kusi se diferencia al establecer un sistema de educación continua —no un campamento aislado— que genera transformación real y a largo plazo."
+    }
+  ],
+  "volunteer": {
+    "title": "Súmate al Cambio",
+    "subtitle": "Llamado a Voluntarias y Voluntarios",
+    "description": "En Fundación Ama Kusi creemos que el cambio social no se construye desde la distancia: se construye desde la presencia, la escucha y la acción colectiva. Si sientes que tu energía, tus talentos y tu tiempo pueden transformar la vida de alguien más, este es tu espacio.",
+    "areas": [
+      {
+        "title": "Educación y Talleres",
+        "description": "Facilitar aprendizajes creativos con niños, jóvenes y adultos mayores."
+      },
+      {
+        "title": "Comunicación y Diseño",
+        "description": "Amplificar nuestro mensaje a través de redes, fotografía y contenido."
+      },
+      {
+        "title": "Gestión y Logística",
+        "description": "Organizar eventos, coordinar actividades y fortalecer la operación."
+      },
+      {
+        "title": "Profesionales en Terreno",
+        "description": "Aportar desde tu disciplina: psicología, trabajo social, salud, arte, tecnología."
+      }
+    ],
+    "callToAction": "No importa tu edad, tu profesión ni tu experiencia. Lo que importa es tu compromiso con un mundo más justo. Súmate hoy. Haz que las historias vivan para siempre."
+  },
+  "contact": {
+    "message": "Si deseas colaborar, realizar una donación o conocer nuestras modalidades de participación, ponte en contacto con nosotras. Tu aporte es un acto de resistencia cultural y una apuesta por un futuro donde cada generación se sienta valorada.",
+    "form": {
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu@correo.cl",
+      "messagePlaceholder": "Escribe tu mensaje..."
+    }
+  }
+}
