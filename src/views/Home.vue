@@ -54,7 +54,7 @@ const scrollTo = (id) => {
 <template>
   <div>
     <!-- ===== HERO ===== -->
-    <section class="relative min-h-screen hero-gradient flex items-center overflow-hidden">
+    <section class="relative min-h-[100dvh] hero-gradient flex items-center overflow-hidden">
       <!-- Subtle desert texture (decorative) -->
       <div aria-hidden="true" class="absolute inset-0 bg-cover bg-center opacity-[0.07]" style="background-image: url('https://images.unsplash.com/photo-1758390930924-8e3213765904?auto=format&fit=crop&w=1920&q=80');" />
       <div class="section-container relative z-10 w-full">
@@ -62,12 +62,12 @@ const scrollTo = (id) => {
           <p class="text-xs font-display font-semibold tracking-[0.15em] text-primary mb-5">
             FUNDACIÓN SIN FINES DE LUCRO
           </p>
-          <h1 class="text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] hero-heading">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl text-white leading-[1.05] hero-heading">
             Transformando vidas
             <span class="text-primary block mt-1">a través de {{ data.global.tagline.toLowerCase() }}</span>
           </h1>
           <p class="text-white/60 text-lg md:text-xl mt-6 max-w-lg leading-relaxed">
-            {{ data.about.description }}
+            Transformamos vidas desde el desierto de Atacama a través de la educación, cultura y arte, conectando generaciones para construir bienestar comunitario.
           </p>
           <div class="flex flex-wrap gap-4 mt-10">
             <AppButton variant="secondary" size="lg" @click="scrollTo('about')">
@@ -104,8 +104,8 @@ const scrollTo = (id) => {
 
         <!-- Quote -->
         <div class="relative max-w-2xl mx-auto mb-20 text-center">
-          <Icon icon="ph:quotes-fill" class="text-3xl text-primary/30 mx-auto mb-4" aria-hidden="true" />
-          <blockquote class="text-xl md:text-2xl text-dark/80 font-heading leading-relaxed italic">
+          <blockquote class="text-xl md:text-2xl text-dark/80 font-heading leading-relaxed italic bg-primary/[.15] p-10 rounded-lg">
+            <Icon icon="ph:quotes-fill" class="text-3xl text-primary/30 mx-auto mb-4" aria-hidden="true" />
             "{{ data.about.quote }}"
           </blockquote>
         </div>
@@ -119,7 +119,7 @@ const scrollTo = (id) => {
               </div>
               <div class="space-y-3">
                 <p class="text-dark/90 text-sm leading-relaxed">
-                  <strong class="text-dark font-semibold">Más de 500 niños y jóvenes</strong> han participado en nuestros programas en la Región de Antofagasta. Con <strong class="text-dark font-semibold">12 talleres</strong> realizados en <strong class="text-dark font-semibold">3 comunas</strong>, seguimos creciendo desde nuestra fundación en <strong class="text-dark font-semibold">2024</strong>.
+                  <strong class="text-dark font-semibold">Más de 80+ niños y jóvenes</strong> han participado en nuestros programas en la Región de Antofagasta. Con <strong class="text-dark font-semibold">12 talleres</strong> realizados en <strong class="text-dark font-semibold">3 comunas</strong>, seguimos creciendo desde nuestra fundación en <strong class="text-dark font-semibold">2024</strong>.
                 </p>
                 <p class="text-dark/60 text-xs leading-relaxed">
                   Cada número representa una historia de transformación, un vínculo comunitario fortalecido y una semilla de cambio para el futuro del desierto de Atacama.
@@ -157,21 +157,21 @@ const scrollTo = (id) => {
         <!-- Team -->
         <div class="mb-20">
           <div class="max-w-xl mb-10">
-            <p class="text-xs font-display font-semibold tracking-[0.15em] text-primary-deep mb-3">NUESTRO EQUIPO</p>
             <h2 class="text-3xl md:text-4xl text-dark">Mujeres fundadoras comprometidas con el cambio social</h2>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div v-for="(member, i) in data.about.team" :key="member.name" class="border border-dark/5 rounded-xl p-6 hover:border-primary/20 transition-colors">
-              <div class="flex items-center gap-3 mb-4">
-                <div class="w-10 h-10 rounded-full flex items-center justify-center font-heading text-sm font-bold text-white" :class="i === 0 ? 'bg-desert-copper' : i === 1 ? 'bg-primary' : 'bg-desert-sand'">
-                  {{ member.name.charAt(0) }}
-                </div>
-                <span class="text-xs font-display font-semibold tracking-wider text-primary">{{ member.label?.toUpperCase() }}</span>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div v-for="(member, i) in data.about.team" :key="member.name" class="flex flex-col items-center text-center border border-dark/5 rounded-xl p-6 md:p-8 hover:border-primary/20 transition-colors">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center font-heading text-xl font-bold text-white mb-4" :class="i === 0 ? 'bg-desert-copper' : i === 1 ? 'bg-primary' : 'bg-desert-sand'">
+                {{ member.name.charAt(0) }}
               </div>
-              <h3 class="font-heading text-lg text-dark mb-1">{{ member.name }}</h3>
-              <p class="text-sm text-dark/70 font-medium mb-2">{{ member.role }}</p>
-              <p class="text-sm text-dark/60 leading-relaxed">{{ member.description }}</p>
-              <a :href="'mailto:' + member.email" class="inline-block text-xs text-primary mt-3 hover:underline">{{ member.email }}</a>
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center justify-center gap-2 mb-1">
+                  <h3 class="font-heading text-lg text-dark">{{ member.name }}</h3>
+                  <span class="inline-block text-[10px] font-semibold tracking-wider px-2 py-0.5 rounded-full" :class="i === 0 ? 'bg-desert-copper/10 text-desert-copper' : i === 1 ? 'bg-primary/10 text-primary' : 'bg-desert-sand/20 text-desert-gold'">{{ member.label?.toUpperCase() }}</span>
+                </div>
+                <p class="text-sm text-dark/70 font-medium mb-2">{{ member.role }}</p>
+                <p class="text-sm text-dark/60 leading-relaxed">{{ member.description }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -184,18 +184,19 @@ const scrollTo = (id) => {
         </div>
 
         <!-- Pillars -->
-        <div class="max-w-xl mb-10">
-          <p class="text-xs font-display font-semibold tracking-[0.15em] text-primary-deep mb-3">ÁREAS DE TRABAJO</p>
-          <h2 class="text-3xl md:text-4xl text-dark">Nuestros Pilares</h2>
+        <div class="max-w-2xl mx-auto mb-12 text-center">
+          <p class="text-xs font-display font-semibold tracking-[0.15em] text-primary-deep mb-3">NUESTROS PILARES</p>
+          <h2 class="text-3xl md:text-5xl text-dark leading-[1.1]">Los valores que guían nuestro trabajo</h2>
         </div>
-        <div class="space-y-1">
-          <div v-for="(p, i) in data.about.vision.pillars" :key="p.title" class="group flex items-start gap-5 py-6 border-b border-dark/5 last:border-0">
-            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <Icon :icon="p.icon" class="text-lg text-primary" aria-hidden="true" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div v-for="(p, i) in data.about.vision.pillars" :key="p.title" class="group rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-md" :class="i % 2 === 0 ? 'bg-desert-copper/[0.07] border border-desert-copper/15' : 'bg-primary/[0.07] border border-primary/15'">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" :class="i % 2 === 0 ? 'bg-desert-copper/15 text-desert-copper' : 'bg-primary/15 text-primary'">
+              <Icon :icon="p.icon" class="text-2xl" aria-hidden="true" />
             </div>
-            <div>
-              <h3 class="font-heading text-lg text-dark">{{ p.title }}</h3>
-            </div>
+            <h3 class="font-heading text-xl text-dark mb-2">{{ p.title }}</h3>
+            <p class="text-dark/60 text-sm leading-relaxed">
+              {{ i === 0 ? 'Creemos en un espacio donde cada persona sea valorada y respetada en su singularidad.' : i === 1 ? 'Impulsamos oportunidades de aprendizaje continuo para todas las generaciones.' : i === 2 ? 'Trabajamos junto a la comunidad para construir redes de apoyo y transformación social.' : 'Generamos iniciativas que perduran en el tiempo, cuidando el entorno y las personas.' }}
+            </p>
           </div>
         </div>
       </div>
@@ -205,6 +206,10 @@ const scrollTo = (id) => {
     <section id="concurso" class="section-padding bg-cream" aria-label="Concurso de dibujo">
       <div class="section-container" data-reveal="concurso">
         <div class="max-w-xl mb-14">
+            <span class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full mb-4">
+              <Icon icon="ph:palette-fill" class="text-sm" />
+              CONCURSO DE DIBUJO
+            </span>
             <h2 class="text-3xl md:text-5xl text-dark leading-[1.1]">{{ data.contest.title }}</h2>
             <p class="text-dark/60 text-sm mt-2 font-medium">{{ data.contest.subtitle }}</p>
         </div>
@@ -224,17 +229,17 @@ const scrollTo = (id) => {
             </div>
           </div>
           <div class="border border-dark/5 rounded-xl p-6">
-            <p class="text-xs font-display font-semibold tracking-wider text-primary mb-4">CATEGORÍAS</p>
+            <p class="text-sm font-display font-semibold text-primary mb-4">Categorías</p>
             <div class="grid grid-cols-2 gap-3 mb-6">
               <div v-for="cat in data.contest.categories" :key="cat.id" class="bg-dark/5 rounded-lg p-3 text-center">
                 <p class="font-heading text-lg text-primary">Categoría {{ cat.id }}</p>
                 <p class="text-xs text-dark/60">{{ cat.range }}</p>
               </div>
             </div>
-            <p class="text-xs font-display font-semibold tracking-wider text-primary mb-3">TEMÁTICAS</p>
+            <p class="text-sm font-display font-semibold text-primary mb-3">Temáticas</p>
             <div class="space-y-2">
               <div v-for="theme in data.contest.themes" :key="theme.name" class="flex items-start gap-2">
-                <Icon icon="ph:palette-fill" class="text-primary text-sm mt-0.5 flex-shrink-0" />
+                <Icon icon="ph:palette-fill" class="text-desert-copper text-sm mt-0.5 flex-shrink-0" />
                 <div>
                   <p class="text-sm font-medium text-dark">{{ theme.name }}</p>
                   <p class="text-xs text-dark/60">{{ theme.description }}</p>
@@ -243,10 +248,13 @@ const scrollTo = (id) => {
             </div>
           </div>
         </div>
-        <div class="border border-dark/5 rounded-xl p-6 md:p-8">
-          <p class="text-xs font-display font-semibold tracking-wider text-primary mb-4">ÁREAS DE IMPACTO</p>
+        <div class="border border-primary/20 rounded-xl p-6 md:p-8 bg-primary/10">
+          <p class="text-sm font-display font-semibold text-primary mb-4">Áreas de impacto</p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div v-for="area in data.contest.impactAreas" :key="area.title" class="text-center">
+              <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                <Icon icon="ph:flower-fill" class="text-primary text-lg" aria-hidden="true" />
+              </div>
               <p class="font-heading text-lg text-dark mb-1">{{ area.title }}</p>
               <p class="text-xs text-dark/60">{{ area.description }}</p>
             </div>
@@ -264,7 +272,7 @@ const scrollTo = (id) => {
         </div>
         <div class="space-y-10">
           <div v-for="project in data.projects" :key="project.title" class="border border-dark/5 rounded-xl p-6 md:p-8">
-            <p class="text-xs font-display font-semibold tracking-wider text-primary mb-1">{{ project.year }}</p>
+            <span class="inline-block bg-desert-copper/10 text-desert-copper text-xs font-semibold px-3 py-1 rounded-full mb-3">{{ project.year }}</span>
             <h3 class="font-heading text-2xl text-dark mb-3">{{ project.title }}</h3>
             <p class="text-dark/80 leading-relaxed mb-4">{{ project.description }}</p>
 
@@ -281,7 +289,7 @@ const scrollTo = (id) => {
 
             <!-- Roadmap (Raíces Vivas) -->
             <div v-if="project.roadmap" class="mb-5">
-              <p class="text-xs font-display font-semibold tracking-wider text-dark/50 mb-3">HOJA DE RUTA</p>
+              <p class="text-sm font-display font-semibold text-dark/50 mb-3">Hoja de ruta</p>
               <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div v-for="step in project.roadmap" :key="step.period" class="bg-dark/5 rounded-lg p-3 text-center">
                   <p class="text-[10px] text-dark/50 font-medium">{{ step.period }}</p>
@@ -292,7 +300,7 @@ const scrollTo = (id) => {
 
             <!-- Benefits (Raíces Vivas) -->
             <div v-if="project.benefits" class="mb-4">
-              <p class="text-xs font-display font-semibold tracking-wider text-dark/50 mb-3">BENEFICIOS</p>
+              <p class="text-sm font-display font-semibold text-dark/50 mb-3">Beneficios</p>
               <div class="space-y-3">
                 <div v-for="b in project.benefits" :key="b.title" class="flex gap-3">
                   <Icon icon="ph:check-circle-fill" class="text-primary text-lg mt-0.5 flex-shrink-0" />
@@ -313,7 +321,7 @@ const scrollTo = (id) => {
             </div>
 
             <!-- Launch -->
-            <p v-if="project.launch" class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mt-2">
+            <p v-if="project.launch" class="inline-block bg-desert-gold/10 text-desert-gold text-xs font-semibold px-3 py-1.5 rounded-full mt-2">
               Lanzamiento: {{ project.launch }}
             </p>
           </div>
@@ -322,23 +330,23 @@ const scrollTo = (id) => {
     </section>
 
     <!-- ===== SÚMATE AL CAMBIO ===== -->
-    <section id="voluntariado" class="section-padding bg-cream" aria-label="Voluntariado">
+    <section id="voluntariado" class="section-padding bg-sage" aria-label="Voluntariado">
       <div class="section-container" data-reveal="voluntariado">
         <div class="max-w-2xl mx-auto text-center mb-12">
           <h2 class="text-3xl md:text-5xl text-dark leading-[1.1] mb-4">{{ data.volunteer.title }}</h2>
           <p class="text-dark/60 text-sm font-medium mb-4">{{ data.volunteer.subtitle }}</p>
           <p class="text-dark/80 leading-relaxed">{{ data.volunteer.description }}</p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div v-for="area in data.volunteer.areas" :key="area.title" class="border border-dark/5 rounded-xl p-6 text-center hover:border-primary/20 hover:shadow-sm transition-all">
-            <Icon icon="ph:hand-heart-fill" class="text-2xl text-primary mx-auto mb-3" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+          <div v-for="(area, i) in data.volunteer.areas" :key="area.title" class="rounded-xl p-6 md:p-8 transition-all duration-300 hover:-translate-y-0.5" :class="i % 2 === 0 ? 'bg-desert-sand/10 border border-desert-sand/20' : 'border border-dark/5 hover:border-desert-sand/30 hover:shadow-sm'">
+            <Icon icon="ph:hand-heart-fill" class="text-2xl text-desert-copper mx-auto mb-3" />
             <h3 class="font-heading text-lg text-dark mb-2">{{ area.title }}</h3>
             <p class="text-dark/60 text-xs leading-relaxed">{{ area.description }}</p>
           </div>
         </div>
-        <div class="max-w-xl mx-auto text-center bg-desert-rust text-white rounded-2xl p-8 md:p-10">
-          <Icon icon="ph:sparkle-fill" class="text-3xl text-primary mx-auto mb-4" />
-          <p class="text-white/90 leading-relaxed text-sm md:text-base italic">"{{ data.volunteer.callToAction }}"</p>
+        <div class="max-w-xl mx-auto text-center bg-desert-sand text-dark rounded-2xl p-8 md:p-10">
+          <Icon icon="ph:sparkle-fill" class="text-3xl text-desert-gold mx-auto mb-4" />
+          <p class="text-dark/90 leading-relaxed text-sm md:text-base italic">"{{ data.volunteer.callToAction }}"</p>
           <AppButton variant="secondary" size="lg" class="mt-6" @click="scrollTo('contacto')">
             Quiero Sumarme
           </AppButton>
@@ -354,19 +362,18 @@ const scrollTo = (id) => {
           <!-- Info -->
           <div class="space-y-8">
             <div>
-              <p class="text-xs font-display font-semibold tracking-[0.15em] text-primary mb-3">CONTACTO</p>
               <h2 class="text-3xl md:text-5xl text-white leading-[1.1]">Hablemos</h2>
               <p class="text-white/50 mt-4 text-sm max-w-sm leading-relaxed">
                 {{ data.contact.message }}
               </p>
             </div>
             <div class="space-y-4">
-              <div v-for="info in [
+              <div v-for="(info, idx) in [
                 { icon: 'ph:map-pin-fill', label: 'Dirección', value: data.global.location },
                 { icon: 'ph:envelope-fill', label: 'Email', value: data.global.contact.email },
                 { icon: 'ph:phone-fill', label: 'Teléfono', value: data.global.contact.phone },
               ]" :key="info.label" class="flex items-center gap-4">
-                <Icon :icon="info.icon" class="text-primary text-lg flex-shrink-0" aria-hidden="true" />
+                <Icon :icon="info.icon" class="text-lg flex-shrink-0" aria-hidden="true" :class="idx === 1 ? 'text-desert-gold' : 'text-primary'" />
                 <div>
                   <p class="text-white/60 text-xs font-medium">{{ info.label }}</p>
                   <p class="text-white/60 text-sm">{{ info.value }}</p>

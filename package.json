@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@fontsource/chewy": "^5.2.7",
+    "@fontsource/sora": "^5.2.8",
+    "@fontsource/work-sans": "^5.2.8",
     "@iconify/vue": "^5.0.1",
     "firebase": "^12.13.0",
     "pinia": "^3.0.4",

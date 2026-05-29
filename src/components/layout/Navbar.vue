@@ -49,7 +49,7 @@ const mobileToggleLabel = computed(() => isOpen.value ? 'Cerrar menú' : 'Abrir 
             <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center" aria-hidden="true">
               <Icon icon="ph:heart-fill" class="text-white text-sm" />
             </div>
-            <span class="font-heading text-lg md:text-xl text-white">Ama Kusi</span>
+            <span class="font-heading text-lg md:text-xl text-white">Fundación Ama Kusi</span>
           </button>
 
           <nav role="navigation" aria-label="Navegación principal" class="hidden md:flex items-center gap-6">

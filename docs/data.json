@@ -16,7 +16,7 @@
   },
   "about": {
     "headline": "Transformando vidas desde el desierto de Atacama",
-    "description": "La Fundación Ama Kusi es un espacio de transformación social que promueve la inclusión, el desarrollo integral y la educación sostenible para niños, jóvenes y adultos mayores en situaciones de vulnerabilidad.",
+    "description": "En Fundación Ama Kusi creemos que transformar vidas es un acto colectivo. Desde el corazón del desierto de Atacama, conectamos con todas las generaciones, a través de la educación,  cultura y el arte, porque sabemos que el bienestar de una comunidad se construye cuando cada persona se siente valorada.",
     "origin": "Ama Kusi surge del compromiso con el servicio comunitario. Durante años, sus fundadoras han liderado actividades de verano, programas de educación alternativa y acciones para personas en riesgo de exclusión. A partir de estas experiencias, se identificó la necesidad de estructurar estos esfuerzos en una organización formal que garantizara continuidad y escalabilidad. Un nombre que refleja nuestra esencia de construir futuro con esperanza.",
     "quote": "Creemos en la planificación con propósito y en la construcción de un futuro más justo y equitativo.",
     "mission": {
@@ -46,7 +46,7 @@
         "isFounder": true
       },
       {
-        "name": "Vania Erazo",
+        "name": "Vannia Erazo Zuleta",
         "role": "Directora de Operaciones y Proyectos",
         "email": "verazo@fundacionamakusi.cl",
         "description": "Ejecución interna, despliegue técnico y cumplimiento de compromisos en terreno",
@@ -54,7 +54,7 @@
         "isFounder": true
       },
       {
-        "name": "Emilia Rojas",
+        "name": "Emilia Estefanía Rojas Díaz",
         "role": "Directora de Comunicaciones y Comunidad",
         "email": "erojas@fundacionamakusi.cl",
         "description": "Difusión, posicionamiento de marca, redes sociales e impacto social",

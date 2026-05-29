@@ -18,7 +18,7 @@ const links = [
 </script>
 
 <template>
-  <footer class="bg-black text-white/55 text-sm" role="contentinfo" aria-label="Pie de página">
+  <footer class="bg-primary-deep text-black/55 text-sm" role="contentinfo" aria-label="Pie de página">
     <div class="max-w-5xl mx-auto px-6 sm:px-8 py-12 md:py-16">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div class="space-y-3">
@@ -45,7 +45,7 @@ const links = [
           <ul class="space-y-2 text-xs text-white/60">
             <li>{{ data.global.location }}</li>
             <li><a :href="'mailto:' + data.global.contact.email" class="hover:text-primary transition-colors">{{ data.global.contact.email }}</a></li>
-            <li>{{ data.global.contact.phone }}</li>
+           <!-- <li>{{ data.global.contact.phone }}</li> -->
           </ul>
         </div>
       </div>
