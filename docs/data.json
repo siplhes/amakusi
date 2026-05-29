@@ -153,7 +153,7 @@
     ],
     "callToAction": "No importa tu edad, tu profesión ni tu experiencia. Lo que importa es tu compromiso con un mundo más justo. Súmate hoy. Haz que las historias vivan para siempre."
   },
-  "principles": {
+"principles": {
     "title": "PRINCIPIOS Y VALORES",
     "items": [
       {
@@ -162,17 +162,17 @@
         "icon": "ph:hand-heart-fill"
       },
       {
-        "title": "INCLUSION Y EQUIDAD",
+        "title": "INCLUSIÓN Y EQUIDAD",
         "description": "Inclusión y equidad orientan las estrategias para garantizar que todos los sectores tengan acceso a las oportunidades.",
         "icon": "ph:users-fill"
       },
       {
-        "title": "ALEGRIA",
+        "title": "ALEGRÍA",
         "description": "Transformación con alegría asegura que los procesos de cambio sean esperanzadores y motivadores.",
         "icon": "ph:sparkle-fill"
       },
       {
-        "title": "CONEXION",
+        "title": "CONEXIÓN",
         "description": "Conexión con el entorno promueve prácticas sostenibles y actividades que integren a las comunidades con su medio ambiente.",
         "icon": "ph:plant-fill"
       },
