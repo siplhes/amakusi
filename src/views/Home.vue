@@ -371,7 +371,6 @@ const scrollTo = (id) => {
               <div v-for="(info, idx) in [
                 { icon: 'ph:map-pin-fill', label: 'Dirección', value: data.global.location },
                 { icon: 'ph:envelope-fill', label: 'Email', value: data.global.contact.email },
-                { icon: 'ph:phone-fill', label: 'Teléfono', value: data.global.contact.phone },
               ]" :key="info.label" class="flex items-center gap-4">
                 <Icon :icon="info.icon" class="text-lg flex-shrink-0" aria-hidden="true" :class="idx === 1 ? 'text-desert-gold' : 'text-primary'" />
                 <div>
