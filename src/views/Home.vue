@@ -83,7 +83,7 @@ const scrollTo = (id) => {
 
     <!-- ===== ABOUT ===== -->
     <section id="about" class="section-padding" aria-label="Sobre nosotros">
-      <div class="section-container" data-reveal="about">
+      <div class="section-container">
         <!-- Intro -->
         <div class="max-w-xl mb-20">
           <p class="text-xs font-display font-semibold tracking-[0.15em] text-primary-deep mb-3">SOBRE NOSOTROS</p>
