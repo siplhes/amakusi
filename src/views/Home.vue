@@ -119,7 +119,7 @@ const scrollTo = (id) => {
               </div>
               <div class="space-y-3">
                 <p class="text-dark/90 text-sm leading-relaxed">
-                  <strong class="text-dark font-semibold">Más de 80+ niños y jóvenes</strong> han participado en nuestros programas en la Región de Antofagasta. Con <strong class="text-dark font-semibold">12 talleres</strong> realizados en <strong class="text-dark font-semibold">3 comunas</strong>, seguimos creciendo desde nuestra fundación en <strong class="text-dark font-semibold">2024</strong>.
+                  <strong class="text-dark font-semibold">Más de 80 niños y jóvenes</strong> han participado en nuestros programas en la Región de Antofagasta. Con <strong class="text-dark font-semibold">12 talleres</strong> realizados en <strong class="text-dark font-semibold">3 comunas</strong>, seguimos creciendo desde nuestra fundación en <strong class="text-dark font-semibold">2024</strong>.
                 </p>
                 <p class="text-dark/60 text-xs leading-relaxed">
                   Cada número representa una historia de transformación, un vínculo comunitario fortalecido y una semilla de cambio para el futuro del desierto de Atacama.
@@ -165,11 +165,9 @@ const scrollTo = (id) => {
                 {{ member.name.charAt(0) }}
               </div>
               <div class="flex-1">
-                <div class="flex flex-wrap items-center justify-center gap-2 mb-1">
-                  <h3 class="font-heading text-lg text-dark">{{ member.name }}</h3>
-                  <span class="inline-block text-[10px] font-semibold tracking-wider px-2 py-0.5 rounded-full" :class="i === 0 ? 'bg-desert-copper/10 text-desert-copper' : i === 1 ? 'bg-primary/10 text-primary' : 'bg-desert-sand/20 text-desert-gold'">{{ member.label?.toUpperCase() }}</span>
-                </div>
-                <p class="text-sm text-dark/70 font-medium mb-2">{{ member.role }}</p>
+                <h3 class="font-heading text-lg text-dark mb-2">{{ member.name }}</h3>
+                <p class="text-sm text-dark/70 font-medium mb-2"><span class="text-[10px] font-semibold tracking-wider px-2 py-0.5 rounded-full" :class="i === 0 ? 'bg-desert-copper/10 text-desert-copper' : i === 1 ? 'bg-primary/10 text-primary' : 'bg-desert-sand/20 text-desert-gold'">{{ member.label?.toUpperCase() }}</span></p>
+                <p class="text-sm text-dark/60 leading-relaxed">{{ member.role }} </p>
                 <p class="text-sm text-dark/60 leading-relaxed">{{ member.description }}</p>
               </div>
             </div>
