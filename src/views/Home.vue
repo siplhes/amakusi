@@ -67,7 +67,7 @@ const scrollTo = (id) => {
             <span class="text-primary block mt-1">a través de {{ data.global.tagline.toLowerCase() }}</span>
           </h1>
           <p class="text-white/60 text-lg md:text-xl mt-6 max-w-lg leading-relaxed">
-          este texto desea cambiarlo por: En Fundación Ama Kusi creemos que transformar vidas es un acto colectivo. Desde el corazón del desierto de Atacama, conectamos con todas las generaciones, a través de la educación,  cultura y el arte, porque sabemos que el bienestar de una comunidad se construye cuando cada persona se siente valorada.                Nuestro nombre, que en Aymara significa "la que proyecta con alegría", es también nuestra promesa: "construir futuro con esperanza, raíces y acción".
+          En <strong>Fundación Ama Kusi</strong> creemos que transformar vidas es un acto colectivo. Desde el corazón del desierto de Atacama, conectamos con todas las generaciones, a través de la educación,  cultura y el arte, porque sabemos que el bienestar de una comunidad se construye cuando cada persona se siente valorada.                Nuestro nombre, que en Aymara significa "la que proyecta con alegría", es también nuestra promesa: "construir futuro con esperanza, raíces y acción".
           </p>
           <div class="flex flex-wrap gap-4 mt-10">
             <AppButton variant="secondary" size="lg" @click="scrollTo('about')">
