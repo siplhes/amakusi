@@ -183,18 +183,16 @@ const scrollTo = (id) => {
 
         <!-- Pillars -->
         <div class="max-w-2xl mx-auto mb-12 text-center">
-          <p class="text-xs font-display font-semibold tracking-[0.15em] text-primary-deep mb-3">NUESTROS PILARES</p>
+          <p class="text-xs font-display font-semibold tracking-[0.15em] text-primary-deep mb-3">{{ data.principles.title }}</p>
           <h2 class="text-3xl md:text-5xl text-dark leading-[1.1]">Los valores que guían nuestro trabajo</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div v-for="(p, i) in data.about.vision.pillars" :key="p.title" class="group rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-md" :class="i % 2 === 0 ? 'bg-desert-copper/[0.07] border border-desert-copper/15' : 'bg-primary/[0.07] border border-primary/15'">
+          <div v-for="(p, i) in data.principles.items" :key="p.title" class="group rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-md" :class="[i % 2 === 0 ? 'bg-desert-copper/[0.07] border border-desert-copper/15' : 'bg-primary/[0.07] border border-primary/15', i === 4 ? 'sm:col-span-2 sm:max-w-md sm:mx-auto' : '']">
             <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" :class="i % 2 === 0 ? 'bg-desert-copper/15 text-desert-copper' : 'bg-primary/15 text-primary'">
               <Icon :icon="p.icon" class="text-2xl" aria-hidden="true" />
             </div>
             <h3 class="font-heading text-xl text-dark mb-2">{{ p.title }}</h3>
-            <p class="text-dark/60 text-sm leading-relaxed">
-              {{ i === 0 ? 'Creemos en un espacio donde cada persona sea valorada y respetada en su singularidad.' : i === 1 ? 'Impulsamos oportunidades de aprendizaje continuo para todas las generaciones.' : i === 2 ? 'Trabajamos junto a la comunidad para construir redes de apoyo y transformación social.' : 'Generamos iniciativas que perduran en el tiempo, cuidando el entorno y las personas.' }}
-            </p>
+            <p class="text-dark/60 text-sm leading-relaxed">{{ p.description }}</p>
           </div>
         </div>
       </div>

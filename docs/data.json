@@ -153,6 +153,36 @@
     ],
     "callToAction": "No importa tu edad, tu profesión ni tu experiencia. Lo que importa es tu compromiso con un mundo más justo. Súmate hoy. Haz que las historias vivan para siempre."
   },
+  "principles": {
+    "title": "PRINCIPIOS Y VALORES",
+    "items": [
+      {
+        "title": "RESPETO",
+        "description": "Respeto a las personas se aplica en la forma en que se escuchan las necesidades de cada grupo beneficiado.",
+        "icon": "ph:hand-heart-fill"
+      },
+      {
+        "title": "INCLUSION Y EQUIDAD",
+        "description": "Inclusión y equidad orientan las estrategias para garantizar que todos los sectores tengan acceso a las oportunidades.",
+        "icon": "ph:users-fill"
+      },
+      {
+        "title": "ALEGRIA",
+        "description": "Transformación con alegría asegura que los procesos de cambio sean esperanzadores y motivadores.",
+        "icon": "ph:sparkle-fill"
+      },
+      {
+        "title": "CONEXION",
+        "description": "Conexión con el entorno promueve prácticas sostenibles y actividades que integren a las comunidades con su medio ambiente.",
+        "icon": "ph:plant-fill"
+      },
+      {
+        "title": "COMPROMISO",
+        "description": "Compromiso con la educación y el desarrollo social es el motor detrás de cada programa, asegurando un impacto positivo y duradero.",
+        "icon": "ph:target-fill"
+      }
+    ]
+  },
   "contact": {
     "message": "Si deseas colaborar, realizar una donación o conocer nuestras modalidades de participación, ponte en contacto con nosotras. Tu aporte es un acto de resistencia cultural y una apuesta por un futuro donde cada generación se sienta valorada.",
     "form": {
