@@ -1,29 +1,31 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('@/views/Home.vue'),
+    path: "/",
+    name: "Home",
+    component: () => import("@/views/Home.vue"),
   },
   {
-    path: '/:pathMatch(.*)*',
-    redirect: '/',
+    path: "/:pathMatch(.*)*",
+    redirect: "/",
   },
-]
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const behavior = prefersReducedMotion ? 'auto' : 'smooth'
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const behavior = prefersReducedMotion ? "auto" : "smooth";
     if (to.hash) {
-      return { el: to.hash, behavior }
+      return { el: to.hash, behavior };
     }
-    if (savedPosition) return savedPosition
-    return { top: 0, behavior }
+    if (savedPosition) return savedPosition;
+    return { top: 0, behavior };
   },
-})
+});
 
-export default router
+export default router;

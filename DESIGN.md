@@ -98,6 +98,7 @@ Warm, grounded, and quietly vibrant. Ama Kusi's visual identity draws from the A
 The design explicitly rejects cold corporate minimalism, generic "nonprofit beige", and SaaS-template aesthetics. Every section should feel handcrafted, warm, and connected to place. The desert palette (sand, copper, gold, rust) exists to be used deliberately, not as an afterthought — it anchors the brand in its territory.
 
 **Key Characteristics:**
+
 - Warm, earth-anchored neutrals with a teal accent that surprises
 - Rounded, friendly geometry (border-radius is generous, not sharp)
 - Typography that mixes playful display with grounded body
@@ -109,24 +110,28 @@ The design explicitly rejects cold corporate minimalism, generic "nonprofit beig
 The palette is a Committed strategy: the teal accent (primary) carries 30-40% of interactive surfaces, while desert warm tones ground section backgrounds and accent moments. The cream background provides a sun-baked canvas.
 
 ### Primary
+
 - **Spring Teal** (#6DCBB3): Primary accent for interactive elements, icons, highlights. Evokes the unexpected vitality of a desert oasis.
 - **Teal Light** (#8FD9C4): Hover states for primary buttons and links.
 - **Teal Deep** (#336F65): Section kickers, secondary text accents. Muted for body-level use.
 - **Teal Muted** (#589792): Subtle decorative uses.
 
 ### Neutral
+
 - **Cream** (#F9F9EA): Page background. Warm, not beige — a sunlit desert tone.
 - **Dark Earth** (#352921): Text and dark section backgrounds. Warm brown-black, never pure gray or black.
 - **Dark Earth Light** (#4F3D33): Secondary dark surfaces, hover states on dark.
 - **Sage** (#E6ECDF): Alternate section background. Desert vegetation tones.
 
 ### Desert Accent
+
 - **Desert Sand** (#D4AD7E): Warm mid-tone for decorative backgrounds, accent cards.
 - **Desert Copper** (#C9804D): Strong accent for CTAs, icons, emphasis.
 - **Desert Gold** (#B37E3B): Warm highlight, decorative elements.
 - **Desert Rust** (#A04B2C): Bold accent for callout boxes, volunteer CTA.
 
 ### Named Rules
+
 **The One Accent Rule.** The teal primary is concentrated on interactive elements — buttons, links, icons, highlights. It should never dominate a page section as a background color. The rarity of the teal is what makes it felt.
 
 **The Desert Rule.** At least one desert tone (sand, copper, gold, rust) must be visibly present in every section below the fold. The brand lives in the desert; the palette must reflect that.
@@ -140,6 +145,7 @@ The palette is a Committed strategy: the teal accent (primary) carries 30-40% of
 **Character:** Playful but grounded. The Chewy headings bring warmth and approachability; Work Sans body keeps the content readable and trustworthy. Sora adds a structured, editorial feel to metadata and labels.
 
 ### Hierarchy
+
 - **Display** (Sora 600, 0.75rem/0.875rem, 1.2, +0.15em tracking): Section kickers and small labels. Always uppercase.
 - **Headline / H1** (Chewy 400, clamp(3rem, 7vw, 5rem), 1.05): Hero titles only. Generous scale, single line ideal.
 - **Heading / H2** (Chewy 400, clamp(1.875rem, 5vw, 3rem), 1.1): Section titles. Generous and inviting.
@@ -154,11 +160,13 @@ Flat-by-default. Depth is conveyed through tonal layering (cream bg → white ca
 Cards use a subtle `1px` border at `rgba(53,41,33,0.05)` for separation. On hover, cards lift with a gentle shadow (`0 4px 24px rgba(0,0,0,0.08)`) and a `-2px` vertical translate — the only elevated state in the system.
 
 ### Named Rules
+
 **The Flat-By-Default Rule.** Surfaces are flat at rest. Elevation (shadow + lift) appears only on interactive hover states. Never use shadows decoratively.
 
 ## 5. Components
 
 ### Buttons
+
 - **Shape:** Fully rounded (pill-style, 9999px radius)
 - **Primary:** Teal (`#6DCBB3`) background, dark text. Hover: lighter teal (`#8FD9C4`)
 - **Secondary:** Dark earth (`#352921`) background, white text. Used for CTAs on light backgrounds
@@ -168,6 +176,7 @@ Cards use a subtle `1px` border at `rgba(53,41,33,0.05)` for separation. On hove
 - **Sizes:** sm (px-5 py-2), md (px-7 py-3), lg (px-9 py-3.5)
 
 ### Cards
+
 - **Shape:** Rounded corners (12px), 1px subtle border, flat at rest
 - **Background:** White surface
 - **Internal Padding:** 24px on all sides (p-6 md:p-8 for featured cards)
@@ -176,6 +185,7 @@ Cards use a subtle `1px` border at `rgba(53,41,33,0.05)` for separation. On hove
 - **Rule:** Cards are containers for distinct, actionable content blocks. Never nest cards. Never use identical card grids (icon + title + text) across multiple sections.
 
 ### Inputs / Fields
+
 - **Style:** Border on dark background (`1px solid rgba(255,255,255,0.1)`, 12px radius), subtle background tint
 - **Focus:** Teal border, slightly brighter background
 - **Placeholder:** White at 20% opacity
@@ -183,6 +193,7 @@ Cards use a subtle `1px` border at `rgba(53,41,33,0.05)` for separation. On hove
 - **Labels:** Sora uppercase, white at 50% opacity
 
 ### Navigation
+
 - **Desktop:** Inline links in header, transparent at rest, full-color on active section
 - **Mobile:** Slide-down drawer with full-width buttons
 - **Scroll behavior:** Background gains opacity/blur on scroll past hero
@@ -191,6 +202,7 @@ Cards use a subtle `1px` border at `rgba(53,41,33,0.05)` for separation. On hove
 ## 6. Do's and Don'ts
 
 ### Do:
+
 - **Do** use desert warm tones (sand, copper, rust) as section backgrounds and accents — the brand lives in the Atacama desert
 - **Do** use the teal primary sparingly: buttons, links, icons. Its rarity is its power
 - **Do** keep spacing generous — sections need room to breathe like the desert landscape
@@ -200,6 +212,7 @@ Cards use a subtle `1px` border at `rgba(53,41,33,0.05)` for separation. On hove
 - **Do** reveal content on scroll (fade + gentle lift) for a calm, unhurried experience
 
 ### Don't:
+
 - **Don't** use pure black (`#000`) or pure white (`#fff`) — tint all neutrals toward the desert warm hue
 - **Don't** use side-stripe borders (`border-left > 1px` as accent) on cards or callouts — use full background tints instead
 - **Don't** use the hero-metric template (big number + small label + gradient accent) — express impact narratively

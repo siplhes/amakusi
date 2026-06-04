@@ -11,7 +11,9 @@
     html {
       scroll-behavior: auto;
     }
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -19,25 +21,30 @@
   }
 
   body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     color: #352921;
-    background-color: #F9F9EA;
+    background-color: #f9f9ea;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Chewy', cursive;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Chewy", cursive;
   }
 
   ::selection {
-    background-color: #6DCBB3;
+    background-color: #6dcbb3;
     color: #1a1a1a;
   }
 
   /* Focus visible ring for keyboard users */
   :focus-visible {
-    outline: 2px solid #6DCBB3;
+    outline: 2px solid #6dcbb3;
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -72,7 +79,7 @@
     left: 0;
     z-index: 100;
     padding: 0.75rem 1.5rem;
-    background: #6DCBB3;
+    background: #6dcbb3;
     color: #1a1a1a;
     font-weight: 600;
     font-size: 0.875rem;

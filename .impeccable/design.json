@@ -4,24 +4,136 @@
   "title": "Design System: Ama Kusi",
   "extensions": {
     "colorMeta": {
-      "primary": { "role": "primary", "displayName": "Spring Teal", "canonical": "oklch(0.78 0.12 175)", "tonalRamp": ["oklch(0.25 0.03 175)", "oklch(0.35 0.05 175)", "oklch(0.45 0.08 175)", "oklch(0.55 0.10 175)", "oklch(0.65 0.12 175)", "oklch(0.75 0.12 175)", "oklch(0.85 0.08 175)", "oklch(0.93 0.04 175)"] },
-      "cream": { "role": "neutral", "displayName": "Sunlit Cream", "canonical": "oklch(0.96 0.01 95)", "tonalRamp": ["oklch(0.20 0.005 95)", "oklch(0.35 0.005 95)", "oklch(0.50 0.005 95)", "oklch(0.65 0.005 95)", "oklch(0.78 0.008 95)", "oklch(0.86 0.01 95)", "oklch(0.93 0.01 95)", "oklch(0.97 0.01 95)"] },
-      "dark": { "role": "neutral", "displayName": "Dark Earth", "canonical": "oklch(0.25 0.02 55)", "tonalRamp": ["oklch(0.12 0.01 55)", "oklch(0.18 0.015 55)", "oklch(0.25 0.02 55)", "oklch(0.35 0.02 55)", "oklch(0.45 0.02 55)", "oklch(0.55 0.015 55)", "oklch(0.70 0.01 55)", "oklch(0.85 0.005 55)"] },
-      "desert-sand": { "role": "accent", "displayName": "Desert Sand", "canonical": "oklch(0.72 0.06 70)", "tonalRamp": ["oklch(0.20 0.02 70)", "oklch(0.30 0.03 70)", "oklch(0.42 0.04 70)", "oklch(0.55 0.05 70)", "oklch(0.65 0.06 70)", "oklch(0.75 0.06 70)", "oklch(0.85 0.04 70)", "oklch(0.93 0.02 70)"] },
-      "desert-copper": { "role": "accent", "displayName": "Desert Copper", "canonical": "oklch(0.58 0.10 55)", "tonalRamp": ["oklch(0.15 0.03 55)", "oklch(0.25 0.05 55)", "oklch(0.38 0.08 55)", "oklch(0.48 0.10 55)", "oklch(0.58 0.10 55)", "oklch(0.68 0.08 55)", "oklch(0.78 0.05 55)", "oklch(0.88 0.03 55)"] },
-      "desert-rust": { "role": "accent", "displayName": "Desert Rust", "canonical": "oklch(0.38 0.08 40)", "tonalRamp": ["oklch(0.10 0.03 40)", "oklch(0.18 0.05 40)", "oklch(0.28 0.07 40)", "oklch(0.38 0.08 40)", "oklch(0.48 0.07 40)", "oklch(0.58 0.05 40)", "oklch(0.68 0.03 40)", "oklch(0.80 0.02 40)"] }
+      "primary": {
+        "role": "primary",
+        "displayName": "Spring Teal",
+        "canonical": "oklch(0.78 0.12 175)",
+        "tonalRamp": [
+          "oklch(0.25 0.03 175)",
+          "oklch(0.35 0.05 175)",
+          "oklch(0.45 0.08 175)",
+          "oklch(0.55 0.10 175)",
+          "oklch(0.65 0.12 175)",
+          "oklch(0.75 0.12 175)",
+          "oklch(0.85 0.08 175)",
+          "oklch(0.93 0.04 175)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Sunlit Cream",
+        "canonical": "oklch(0.96 0.01 95)",
+        "tonalRamp": [
+          "oklch(0.20 0.005 95)",
+          "oklch(0.35 0.005 95)",
+          "oklch(0.50 0.005 95)",
+          "oklch(0.65 0.005 95)",
+          "oklch(0.78 0.008 95)",
+          "oklch(0.86 0.01 95)",
+          "oklch(0.93 0.01 95)",
+          "oklch(0.97 0.01 95)"
+        ]
+      },
+      "dark": {
+        "role": "neutral",
+        "displayName": "Dark Earth",
+        "canonical": "oklch(0.25 0.02 55)",
+        "tonalRamp": [
+          "oklch(0.12 0.01 55)",
+          "oklch(0.18 0.015 55)",
+          "oklch(0.25 0.02 55)",
+          "oklch(0.35 0.02 55)",
+          "oklch(0.45 0.02 55)",
+          "oklch(0.55 0.015 55)",
+          "oklch(0.70 0.01 55)",
+          "oklch(0.85 0.005 55)"
+        ]
+      },
+      "desert-sand": {
+        "role": "accent",
+        "displayName": "Desert Sand",
+        "canonical": "oklch(0.72 0.06 70)",
+        "tonalRamp": [
+          "oklch(0.20 0.02 70)",
+          "oklch(0.30 0.03 70)",
+          "oklch(0.42 0.04 70)",
+          "oklch(0.55 0.05 70)",
+          "oklch(0.65 0.06 70)",
+          "oklch(0.75 0.06 70)",
+          "oklch(0.85 0.04 70)",
+          "oklch(0.93 0.02 70)"
+        ]
+      },
+      "desert-copper": {
+        "role": "accent",
+        "displayName": "Desert Copper",
+        "canonical": "oklch(0.58 0.10 55)",
+        "tonalRamp": [
+          "oklch(0.15 0.03 55)",
+          "oklch(0.25 0.05 55)",
+          "oklch(0.38 0.08 55)",
+          "oklch(0.48 0.10 55)",
+          "oklch(0.58 0.10 55)",
+          "oklch(0.68 0.08 55)",
+          "oklch(0.78 0.05 55)",
+          "oklch(0.88 0.03 55)"
+        ]
+      },
+      "desert-rust": {
+        "role": "accent",
+        "displayName": "Desert Rust",
+        "canonical": "oklch(0.38 0.08 40)",
+        "tonalRamp": [
+          "oklch(0.10 0.03 40)",
+          "oklch(0.18 0.05 40)",
+          "oklch(0.28 0.07 40)",
+          "oklch(0.38 0.08 40)",
+          "oklch(0.48 0.07 40)",
+          "oklch(0.58 0.05 40)",
+          "oklch(0.68 0.03 40)",
+          "oklch(0.80 0.02 40)"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display / Kicker", "purpose": "Section kickers, metadata labels. Always uppercase with wide tracking." },
-      "heading": { "displayName": "Heading (Chewy)", "purpose": "All headlines from hero to card titles. Friendly, rounded cursive." },
-      "body": { "displayName": "Body (Work Sans)", "purpose": "Paragraphs, descriptions, running text. Max 75ch line length." },
-      "label": { "displayName": "Label (Sora)", "purpose": "Small UI labels, form labels, metadata." }
+      "display": {
+        "displayName": "Display / Kicker",
+        "purpose": "Section kickers, metadata labels. Always uppercase with wide tracking."
+      },
+      "heading": {
+        "displayName": "Heading (Chewy)",
+        "purpose": "All headlines from hero to card titles. Friendly, rounded cursive."
+      },
+      "body": {
+        "displayName": "Body (Work Sans)",
+        "purpose": "Paragraphs, descriptions, running text. Max 75ch line length."
+      },
+      "label": {
+        "displayName": "Label (Sora)",
+        "purpose": "Small UI labels, form labels, metadata."
+      }
     },
     "motion": [
-      { "name": "ease-reveal", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Scroll-triggered section reveals. Ease-out-expo curve for natural deceleration." },
-      { "name": "duration-reveal", "value": "700ms", "purpose": "Duration for scroll reveal animations." },
-      { "name": "ease-hover", "value": "cubic-bezier(0.25, 1, 0.5, 1)", "purpose": "Card hover lift transitions." },
-      { "name": "duration-hover", "value": "200ms", "purpose": "Hover state transitions." }
+      {
+        "name": "ease-reveal",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Scroll-triggered section reveals. Ease-out-expo curve for natural deceleration."
+      },
+      {
+        "name": "duration-reveal",
+        "value": "700ms",
+        "purpose": "Duration for scroll reveal animations."
+      },
+      {
+        "name": "ease-hover",
+        "value": "cubic-bezier(0.25, 1, 0.5, 1)",
+        "purpose": "Card hover lift transitions."
+      },
+      {
+        "name": "duration-hover",
+        "value": "200ms",
+        "purpose": "Hover state transitions."
+      }
     ],
     "breakpoints": [
       { "name": "sm", "value": "640px" },
@@ -74,9 +186,21 @@
       "Motion that reveals calmly (fade + lift), never distracts"
     ],
     "rules": [
-      { "name": "The One Accent Rule", "body": "The teal primary is concentrated on interactive elements — buttons, links, icons, highlights. It should never dominate a page section as a background color. The rarity of the teal is what makes it felt.", "section": "colors" },
-      { "name": "The Desert Rule", "body": "At least one desert tone (sand, copper, gold, rust) must be visibly present in every section below the fold. The brand lives in the desert; the palette must reflect that.", "section": "colors" },
-      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Elevation (shadow + lift) appears only on interactive hover states. Never use shadows decoratively.", "section": "elevation" }
+      {
+        "name": "The One Accent Rule",
+        "body": "The teal primary is concentrated on interactive elements — buttons, links, icons, highlights. It should never dominate a page section as a background color. The rarity of the teal is what makes it felt.",
+        "section": "colors"
+      },
+      {
+        "name": "The Desert Rule",
+        "body": "At least one desert tone (sand, copper, gold, rust) must be visibly present in every section below the fold. The brand lives in the desert; the palette must reflect that.",
+        "section": "colors"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Surfaces are flat at rest. Elevation (shadow + lift) appears only on interactive hover states. Never use shadows decoratively.",
+        "section": "elevation"
+      }
     ],
     "dos": [
       "Do use desert warm tones (sand, copper, rust) as section backgrounds and accents — the brand lives in the Atacama desert",

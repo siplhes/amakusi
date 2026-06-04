@@ -22,18 +22,36 @@
     "mission": {
       "text": "Ser una organización de impacto social, capaz de transformar vidas de niños, jóvenes y adultos mayores a través de programas integrales que conecten generaciones y promuevan el bienestar y el desarrollo sostenible.",
       "pillars": [
-        { "title": "Inclusión", "subtitle": "Programas integrales para todas las edades" },
-        { "title": "Conexión", "subtitle": "Puentes intergeneracionales de cuidado" },
-        { "title": "Sostenibilidad", "subtitle": "Desarrollo con visión de largo plazo" }
+        {
+          "title": "Inclusión",
+          "subtitle": "Programas integrales para todas las edades"
+        },
+        {
+          "title": "Conexión",
+          "subtitle": "Puentes intergeneracionales de cuidado"
+        },
+        {
+          "title": "Sostenibilidad",
+          "subtitle": "Desarrollo con visión de largo plazo"
+        }
       ]
     },
     "vision": {
       "text": "Crear oportunidades educativas, sociales y culturales, integrando innovación, liderazgo y una visión sostenible que fomente el crecimiento comunitario, las raíces y el respeto por los pueblos originarios y la igualdad de oportunidades.",
       "pillars": [
-        { "title": "Educación alternativa e integradora", "icon": "ph:star-four-fill" },
-        { "title": "Liderazgo femenino y comunitario", "icon": "ph:lightbulb-fill" },
+        {
+          "title": "Educación alternativa e integradora",
+          "icon": "ph:star-four-fill"
+        },
+        {
+          "title": "Liderazgo femenino y comunitario",
+          "icon": "ph:lightbulb-fill"
+        },
         { "title": "Innovación", "icon": "ph:compass-fill" },
-        { "title": "Social con raíces culturales", "icon": "ph:hand-heart-fill" }
+        {
+          "title": "Social con raíces culturales",
+          "icon": "ph:hand-heart-fill"
+        }
       ]
     },
     "team": [
@@ -79,15 +97,36 @@
       { "id": "D", "range": "15-18 años" }
     ],
     "themes": [
-      { "name": "Tierra Viva", "description": "Naturaleza, flora, fauna y entorno" },
-      { "name": "Territorio Mágico", "description": "Lugares emblemáticos y cultura local" },
-      { "name": "Familia Raíz", "description": "Comunidad, vínculos y vida cotidiana" },
-      { "name": "Arte Libre", "description": "Expresión sin límites ni formatos" }
+      {
+        "name": "Tierra Viva",
+        "description": "Naturaleza, flora, fauna y entorno"
+      },
+      {
+        "name": "Territorio Mágico",
+        "description": "Lugares emblemáticos y cultura local"
+      },
+      {
+        "name": "Familia Raíz",
+        "description": "Comunidad, vínculos y vida cotidiana"
+      },
+      {
+        "name": "Arte Libre",
+        "description": "Expresión sin límites ni formatos"
+      }
     ],
     "impactAreas": [
-      { "title": "Estimulación Cognitiva", "description": "Activa funciones psicomotrices y de memoria en la población mayor." },
-      { "title": "Integración", "description": "Los adultos mayores trabajan con el arte de las nuevas generaciones." },
-      { "title": "Sustentabilidad", "description": "Reciclaje de materiales para dar vida a los dibujos como legados." }
+      {
+        "title": "Estimulación Cognitiva",
+        "description": "Activa funciones psicomotrices y de memoria en la población mayor."
+      },
+      {
+        "title": "Integración",
+        "description": "Los adultos mayores trabajan con el arte de las nuevas generaciones."
+      },
+      {
+        "title": "Sustentabilidad",
+        "description": "Reciclaje de materiales para dar vida a los dibujos como legados."
+      }
     ]
   },
   "projects": [
@@ -104,9 +143,18 @@
         { "period": "Oct", "milestone": "Lanzamiento" }
       ],
       "benefits": [
-        { "title": "Envejecimiento Activo", "description": "Promueve que las personas mayores compartan su sabiduría, validando su trayectoria y fortaleciendo su rol en la familia." },
-        { "title": "Resistencia a la Inmediatez", "description": "Propone una experiencia colaborativa, pausada y táctil. Una invitación a detenerse y escucharse." },
-        { "title": "Patrimonio Afectivo", "description": "Ofrece la oportunidad de blindar la identidad familiar antes de que el tiempo borre los detalles." }
+        {
+          "title": "Envejecimiento Activo",
+          "description": "Promueve que las personas mayores compartan su sabiduría, validando su trayectoria y fortaleciendo su rol en la familia."
+        },
+        {
+          "title": "Resistencia a la Inmediatez",
+          "description": "Propone una experiencia colaborativa, pausada y táctil. Una invitación a detenerse y escucharse."
+        },
+        {
+          "title": "Patrimonio Afectivo",
+          "description": "Ofrece la oportunidad de blindar la identidad familiar antes de que el tiempo borre los detalles."
+        }
       ],
       "launch": "15 de Octubre 2026"
     },
@@ -116,9 +164,18 @@
       "description": "Programa social para visibilización de adultos mayores, contención para mujeres cuidadoras y acompañamiento para la juventud.",
       "longDescription": "Primer contrato privado consolidado como entidad ejecutora de un programa social dentro del proyecto piloto Suma+ Comunidad, formalizado en mayo de 2026 con fase de ejecución en septiembre.",
       "areas": [
-        { "title": "Adultos Mayores", "description": "Visibilización, integración social y envejecimiento activo con datos en tiempo real." },
-        { "title": "Mujeres Cuidadoras", "description": "Contención, redes de apoyo y valorización de su rol en la comunidad." },
-        { "title": "Juventud", "description": "Acompañamiento y mitigación de problemáticas de salud mental y depresión." }
+        {
+          "title": "Adultos Mayores",
+          "description": "Visibilización, integración social y envejecimiento activo con datos en tiempo real."
+        },
+        {
+          "title": "Mujeres Cuidadoras",
+          "description": "Contención, redes de apoyo y valorización de su rol en la comunidad."
+        },
+        {
+          "title": "Juventud",
+          "description": "Acompañamiento y mitigación de problemáticas de salud mental y depresión."
+        }
       ],
       "launch": "Septiembre 2026"
     },
@@ -153,7 +210,7 @@
     ],
     "callToAction": "No importa tu edad, tu profesión ni tu experiencia. Lo que importa es tu compromiso con un mundo más justo. Súmate hoy. Haz que las historias vivan para siempre."
   },
-"principles": {
+  "principles": {
     "title": "PRINCIPIOS Y VALORES",
     "items": [
       {

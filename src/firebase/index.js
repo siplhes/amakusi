@@ -1,5 +1,10 @@
-import { initializeApp } from 'firebase/app'
-import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore'
+import { initializeApp } from "firebase/app";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -8,36 +13,36 @@ const firebaseConfig = {
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
-}
+};
 
-const app = initializeApp(firebaseConfig)
-const db = getFirestore(app)
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 export const saveContactForm = async (data) => {
   try {
-    const docRef = await addDoc(collection(db, 'contactos'), {
+    const docRef = await addDoc(collection(db, "contactos"), {
       ...data,
       createdAt: serverTimestamp(),
-    })
-    return { success: true, id: docRef.id }
+    });
+    return { success: true, id: docRef.id };
   } catch (error) {
-    console.error('Error al guardar contacto:', error)
-    return { success: false, error: error.message }
+    console.error("Error al guardar contacto:", error);
+    return { success: false, error: error.message };
   }
-}
+};
 
 export const saveConcursoRegistration = async (data) => {
   try {
-    const docRef = await addDoc(collection(db, 'inscripciones_concurso'), {
+    const docRef = await addDoc(collection(db, "inscripciones_concurso"), {
       ...data,
       createdAt: serverTimestamp(),
-    })
-    return { success: true, id: docRef.id }
+    });
+    return { success: true, id: docRef.id };
   } catch (error) {
-    console.error('Error al guardar inscripción:', error)
-    return { success: false, error: error.message }
+    console.error("Error al guardar inscripción:", error);
+    return { success: false, error: error.message };
   }
-}
+};
 
-export { db }
-export default app
+export { db };
+export default app;
