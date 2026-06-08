@@ -19,6 +19,13 @@ const links = [
   { name: "Voluntariado", id: "voluntariado" },
   { name: "Contacto", id: "contacto" },
 ];
+
+const socialLinks = [
+  { icon: "ph:instagram-logo-fill", label: "Instagram", url: import.meta.env.VITE_INSTAGRAM_URL },
+  { icon: "ph:tiktok-logo-fill", label: "TikTok", url: import.meta.env.VITE_TIKTOK_URL },
+  { icon: "ph:facebook-logo-fill", label: "Facebook", url: import.meta.env.VITE_FACEBOOK_URL },
+  { icon: "ph:linkedin-logo-fill", label: "LinkedIn", url: import.meta.env.VITE_LINKEDIN_URL },
+];
 </script>
 
 <template>
@@ -71,8 +78,20 @@ const links = [
                 >{{ data.global.contact.email }}</a
               >
             </li>
-            <!-- <li>{{ data.global.contact.phone }}</li> -->
           </ul>
+          <div class="flex items-center gap-3 mt-4">
+            <a
+              v-for="social in socialLinks"
+              :key="social.label"
+              :href="social.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              :aria-label="social.label"
+              class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:bg-primary/20 hover:text-primary transition-colors"
+            >
+              <Icon :icon="social.icon" class="text-sm" />
+            </a>
+          </div>
         </div>
       </div>
       <div

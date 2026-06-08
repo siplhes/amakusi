@@ -9,6 +9,9 @@ import data from "../../docs/data.json";
 
 const contactStore = useContactStore();
 
+// ─── External URLs from env ───
+const concursoFormUrl = import.meta.env.VITE_CONCURSO_FORM_URL || "";
+
 // ─── Scroll Reveal ───
 let revealObserver = null;
 
@@ -420,6 +423,16 @@ const scrollTo = (id) => {
                 </p>
               </div>
             </div>
+            <a
+              v-if="concursoFormUrl"
+              :href="concursoFormUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-primary text-dark font-semibold rounded-xl px-6 py-3 text-sm transition-all hover:bg-primary-light mt-4"
+            >
+              <Icon icon="ph:pen-fill" class="text-sm" />
+              Inscribirse ahora
+            </a>
           </div>
           <div class="border border-dark/5 rounded-xl p-6">
             <p class="text-sm font-display font-semibold text-primary mb-4">
@@ -618,7 +631,7 @@ const scrollTo = (id) => {
     <!-- ===== SÚMATE AL CAMBIO ===== -->
     <section
       id="voluntariado"
-      class="section-padding bg-sage"
+      class="section-padding bg-[#D6F0EB]"
       aria-label="Voluntariado"
     >
       <div class="section-container" data-reveal="voluntariado">
@@ -681,7 +694,7 @@ const scrollTo = (id) => {
     <!-- ===== CONTACTO ===== -->
     <section
       id="contacto"
-      class="relative bg-dark text-white section-padding overflow-hidden"
+      class="relative bg-[#F5F0E8] text-dark section-padding overflow-hidden"
       aria-label="Contacto"
     >
       <div
@@ -696,10 +709,10 @@ const scrollTo = (id) => {
           <!-- Info -->
           <div class="space-y-8">
             <div>
-              <h2 class="text-3xl md:text-5xl text-white leading-[1.1]">
+              <h2 class="text-3xl md:text-5xl text-dark leading-[1.1]">
                 Hablemos
               </h2>
-              <p class="text-white/50 mt-4 text-sm max-w-sm leading-relaxed">
+              <p class="text-dark/60 mt-4 text-sm max-w-sm leading-relaxed">
                 {{ data.contact.message }}
               </p>
             </div>
@@ -727,10 +740,10 @@ const scrollTo = (id) => {
                   :class="idx === 1 ? 'text-desert-gold' : 'text-primary'"
                 />
                 <div>
-                  <p class="text-white/60 text-xs font-medium">
+                  <p class="text-dark/60 text-xs font-medium">
                     {{ info.label }}
                   </p>
-                  <p class="text-white/60 text-sm">{{ info.value }}</p>
+                  <p class="text-dark/80 text-sm">{{ info.value }}</p>
                 </div>
               </div>
             </div>
@@ -742,7 +755,7 @@ const scrollTo = (id) => {
               <div>
                 <label
                   for="cNombre"
-                  class="block text-xs font-display font-semibold tracking-wider text-white/50 mb-2"
+                  class="block text-xs font-display font-semibold tracking-wider text-dark/50 mb-2"
                   >NOMBRE</label
                 >
                 <input
@@ -750,7 +763,7 @@ const scrollTo = (id) => {
                   v-model="cNombre"
                   @blur="cNomBlur"
                   placeholder="Tu nombre"
-                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-white/20 outline-none transition-colors focus:border-primary focus:bg-white/10"
+                  class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3.5 text-sm text-dark placeholder-dark/30 outline-none transition-colors focus:border-primary focus:bg-white"
                   :class="cNomErr && cNomTouch ? 'border-red-400' : ''"
                   :aria-invalid="cNomErr && cNomTouch ? 'true' : 'false'"
                   :aria-describedby="
@@ -760,7 +773,7 @@ const scrollTo = (id) => {
                 <p
                   v-if="cNomErr && cNomTouch"
                   id="cNombre-err"
-                  class="text-red-400 text-xs mt-1.5"
+                  class="text-red-500 text-xs mt-1.5"
                   role="alert"
                 >
                   {{ cNomErr }}
@@ -769,7 +782,7 @@ const scrollTo = (id) => {
               <div>
                 <label
                   for="cEmail"
-                  class="block text-xs font-display font-semibold tracking-wider text-white/50 mb-2"
+                  class="block text-xs font-display font-semibold tracking-wider text-dark/50 mb-2"
                   >EMAIL</label
                 >
                 <input
@@ -778,7 +791,7 @@ const scrollTo = (id) => {
                   @blur="cEmailBlur"
                   type="email"
                   placeholder="tu@correo.cl"
-                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-white/20 outline-none transition-colors focus:border-primary focus:bg-white/10"
+                  class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3.5 text-sm text-dark placeholder-dark/30 outline-none transition-colors focus:border-primary focus:bg-white"
                   :class="cEmailErr && cEmailTouch ? 'border-red-400' : ''"
                   :aria-invalid="cEmailErr && cEmailTouch ? 'true' : 'false'"
                   :aria-describedby="
@@ -788,7 +801,7 @@ const scrollTo = (id) => {
                 <p
                   v-if="cEmailErr && cEmailTouch"
                   id="cEmail-err"
-                  class="text-red-400 text-xs mt-1.5"
+                  class="text-red-500 text-xs mt-1.5"
                   role="alert"
                 >
                   {{ cEmailErr }}
@@ -797,7 +810,7 @@ const scrollTo = (id) => {
               <div>
                 <label
                   for="cMensaje"
-                  class="block text-xs font-display font-semibold tracking-wider text-white/50 mb-2"
+                  class="block text-xs font-display font-semibold tracking-wider text-dark/50 mb-2"
                   >MENSAJE</label
                 >
                 <textarea
@@ -806,7 +819,7 @@ const scrollTo = (id) => {
                   @blur="cMenBlur"
                   placeholder="Escribe tu mensaje..."
                   rows="5"
-                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-white/20 outline-none transition-colors focus:border-primary focus:bg-white/10 resize-none"
+                  class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3.5 text-sm text-dark placeholder-dark/30 outline-none transition-colors focus:border-primary focus:bg-white resize-none"
                   :class="cMenErr && cMenTouch ? 'border-red-400' : ''"
                   :aria-invalid="cMenErr && cMenTouch ? 'true' : 'false'"
                   :aria-describedby="
@@ -816,7 +829,7 @@ const scrollTo = (id) => {
                 <p
                   v-if="cMenErr && cMenTouch"
                   id="cMensaje-err"
-                  class="text-red-400 text-xs mt-1.5"
+                  class="text-red-500 text-xs mt-1.5"
                   role="alert"
                 >
                   {{ cMenErr }}
@@ -839,8 +852,8 @@ const scrollTo = (id) => {
                     class="text-primary text-3xl mb-2"
                     aria-hidden="true"
                   />
-                  <p class="text-white font-semibold">¡Mensaje enviado!</p>
-                  <p class="text-white/50 text-sm mt-1">
+                  <p class="text-dark font-semibold">¡Mensaje enviado!</p>
+                  <p class="text-dark/60 text-sm mt-1">
                     Te responderemos a la brevedad.
                   </p>
                   <button
@@ -856,7 +869,7 @@ const scrollTo = (id) => {
                 class="border border-red-400/30 rounded-xl p-4 text-center"
                 role="alert"
               >
-                <p class="text-red-400 text-sm">{{ contactStore.error }}</p>
+                <p class="text-red-500 text-sm">{{ contactStore.error }}</p>
               </div>
 
               <button
