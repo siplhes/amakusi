@@ -21,19 +21,23 @@ export const useContactStore = defineStore("contact", () => {
       console.warn("Firebase no disponible, continuando:", firebaseErr);
     }
 
-    // Send email via StaticForms (form-urlencoded POST)
+    // Send email via StaticForms v3 (URL suffix approach)
     try {
+      const apiKey = import.meta.env.VITE_STATICFORMS_API_KEY;
       const body = new URLSearchParams();
-      body.append("apiKey", import.meta.env.VITE_STATICFORMS_API_KEY);
       body.append("subject", `Nuevo mensaje de contacto: ${formData.nombre}`);
       body.append("name", formData.nombre);
       body.append("email", formData.email);
       body.append("message", formData.mensaje);
 
-      const res = await fetch("https://api.staticforms.dev/submit", {
-        method: "POST",
-        body,
-      });
+      const res = await fetch(
+        `https://api.staticforms.dev/submit/${apiKey}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body,
+        }
+      );
 
       const data = await res.json();
       if (!data.success) {

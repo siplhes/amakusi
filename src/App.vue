@@ -12,7 +12,7 @@ import Footer from "@/components/layout/Footer.vue";
 
     <Navbar />
 
-    <main id="main-content" class="flex-grow" role="main" tabindex="-1">
+    <main id="main-content" class="flex-grow" tabindex="-1">
       <router-view />
     </main>
 

@@ -30,12 +30,12 @@ const socialLinks = [
 
 <template>
   <footer
-    class="bg-primary-deep text-black/55 text-sm"
+    class="bg-primary-deep text-white/80 text-sm"
     role="contentinfo"
     aria-label="Pie de página"
   >
     <div class="max-w-5xl mx-auto px-6 sm:px-8 py-12 md:py-16">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <nav class="grid grid-cols-1 md:grid-cols-3 gap-10" aria-label="Pie de página - navegación">
         <div class="space-y-3">
           <button
             @click="scrollTo('hero')"
@@ -50,17 +50,17 @@ const socialLinks = [
             </div>
             <span class="font-heading text-lg text-white">Ama Kusi</span>
           </button>
-          <p class="text-white/60 text-xs leading-relaxed max-w-xs">
+          <p class="text-white/80 text-xs leading-relaxed max-w-xs">
             {{ data.about.description }}
           </p>
         </div>
         <div>
           <h4 class="font-heading text-sm text-white mb-4">Enlaces</h4>
-          <ul class="space-y-2">
+          <ul class="space-y-2" role="list">
             <li v-for="link in links" :key="link.id">
               <button
                 @click="scrollTo(link.id)"
-                class="text-white/60 hover:text-primary text-xs transition-colors cursor-pointer"
+                class="text-white/80 hover:text-primary text-xs transition-colors cursor-pointer"
               >
                 {{ link.name }}
               </button>
@@ -69,41 +69,44 @@ const socialLinks = [
         </div>
         <div>
           <h4 class="font-heading text-sm text-white mb-4">Contacto</h4>
-          <ul class="space-y-2 text-xs text-white/60">
-            <li>{{ data.global.location }}</li>
-            <li>
+          <address class="not-italic space-y-1 text-xs text-white/80">
+            <p>{{ data.global.location }}</p>
+            <p>
               <a
                 :href="'mailto:' + data.global.contact.email"
                 class="hover:text-primary transition-colors"
                 >{{ data.global.contact.email }}</a
               >
-            </li>
-          </ul>
-          <div class="flex items-center gap-3 mt-4">
-            <a
+            </p>
+          </address>
+          <ul class="flex items-center gap-3 mt-4" role="list" aria-label="Redes sociales">
+            <li
               v-for="social in socialLinks"
               :key="social.label"
-              :href="social.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              :aria-label="social.label"
-              class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:bg-primary/20 hover:text-primary transition-colors"
             >
-              <Icon :icon="social.icon" class="text-sm" />
-            </a>
-          </div>
+              <a
+                :href="social.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                :aria-label="social.label"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/80 hover:bg-primary/20 hover:text-primary transition-colors"
+              >
+                <Icon :icon="social.icon" class="text-sm" />
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
+      </nav>
       <div
-        class="border-t border-white/5 mt-10 pt-6 text-center text-white/30 text-xs"
+        class="border-t border-white/10 mt-10 pt-6 text-center text-white/60"
       >
-        &copy; {{ new Date().getFullYear() }} Fundación Ama Kusi
-        <p>
+        <p class="text-md">&copy; {{ new Date().getFullYear() }} Fundación Ama Kusi. Todos los derechos reservados.</p>
+        <p class="mt-2">
           Build by
           <a
             href="https://siplhes.vercel.app/"
             target="_blank"
-            class="hover:text-primary transition-colors"
+            class="hover:text-primary transition-colors text-xs font-mono"
             >Siplhes</a
           >
         </p>

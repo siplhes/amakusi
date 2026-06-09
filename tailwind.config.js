@@ -10,6 +10,7 @@ export default {
           light: "#8FD9C4",
           deep: "#336F65",
           muted: "#589792",
+          aaa: "#2B5040",
         },
         // Desert palette - from the Atacama imagery
         desert: {

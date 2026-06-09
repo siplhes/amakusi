@@ -84,7 +84,7 @@ const scrollTo = (id) => {
 <template>
   <div>
     <!-- ===== HERO ===== -->
-    <section
+    <header
       class="relative min-h-[100dvh] hero-gradient flex items-center overflow-hidden"
     >
       <!-- Subtle desert texture (decorative) -->
@@ -98,7 +98,7 @@ const scrollTo = (id) => {
       <div class="section-container relative z-10 w-full">
         <div class="max-w-2xl">
           <p
-            class="text-xs font-display font-semibold tracking-[0.15em] text-primary mb-5"
+            class="text-xs font-display font-semibold tracking-[0.15em] text-white mb-4"
           >
             FUNDACIÓN SIN FINES DE LUCRO
           </p>
@@ -106,12 +106,12 @@ const scrollTo = (id) => {
             class="text-4xl md:text-6xl lg:text-7xl text-white leading-[1.05] hero-heading"
           >
             Transformando vidas
-            <span class="text-primary block mt-1"
+            <span class="text-primary-light block mt-1"
               >a través de {{ data.global.tagline.toLowerCase() }}</span
             >
           </h1>
           <p
-            class="text-white/60 text-lg md:text-xl mt-6 max-w-lg leading-relaxed"
+            class="text-white/75 text-lg md:text-xl mt-6 max-w-lg leading-relaxed"
           >
             En <strong>Fundación Ama Kusi</strong> creemos que transformar vidas
             es un acto colectivo. Desde el corazón del desierto de Atacama,
@@ -131,19 +131,19 @@ const scrollTo = (id) => {
           </div>
         </div>
       </div>
-    </section>
+    </header>
 
     <!-- ===== ABOUT ===== -->
-    <section id="about" class="section-padding" aria-label="Sobre nosotros">
+    <section id="about" class="section-padding" aria-labelledby="about-heading">
       <div class="section-container">
         <!-- Intro -->
         <div class="max-w-xl mb-20">
           <p
-            class="text-xs font-display font-semibold tracking-[0.15em] text-primary-deep mb-3"
+            class="text-xs font-display font-semibold tracking-[0.15em] text-primary-aaa mb-3"
           >
             SOBRE NOSOTROS
           </p>
-          <h2 class="text-3xl md:text-5xl text-dark leading-[1.1]">
+          <h2 id="about-heading" class="text-3xl md:text-5xl text-dark leading-[1.1]">
             {{ data.about.headline }}
           </h2>
         </div>
@@ -197,7 +197,7 @@ const scrollTo = (id) => {
                   seguimos creciendo desde nuestra fundación en
                   <strong class="text-dark font-semibold">2024</strong>.
                 </p>
-                <p class="text-dark/60 text-xs leading-relaxed">
+                <p class="text-dark/75 text-xs leading-relaxed">
                   Cada número representa una historia de transformación, un
                   vínculo comunitario fortalecido y una semilla de cambio para
                   el futuro del desierto de Atacama.
@@ -236,10 +236,10 @@ const scrollTo = (id) => {
               class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-5"
             >
               <Icon
-                icon="ph:target-fill"
-                class="text-lg text-primary"
-                aria-hidden="true"
-              />
+                  icon="ph:target-fill"
+                  class="text-lg text-primary-deep"
+                  aria-hidden="true"
+                />
             </div>
             <h3 class="font-heading text-2xl text-dark mb-3">Misión</h3>
             <p class="text-dark/90 text-sm leading-relaxed">
@@ -251,10 +251,10 @@ const scrollTo = (id) => {
               class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-5"
             >
               <Icon
-                icon="ph:eye-fill"
-                class="text-lg text-primary"
-                aria-hidden="true"
-              />
+                  icon="ph:eye-fill"
+                  class="text-lg text-primary-deep"
+                  aria-hidden="true"
+                />
             </div>
             <h3 class="font-heading text-2xl text-dark mb-3">Visión</h3>
             <p class="text-dark/90 text-sm leading-relaxed">
@@ -266,12 +266,17 @@ const scrollTo = (id) => {
         <!-- Team -->
         <div class="mb-20">
           <div class="max-w-xl mb-10">
+            <p
+              class="text-xs font-display font-semibold tracking-[0.15em] text-primary-aaa mb-3"
+            >
+              NUESTRO EQUIPO
+            </p>
             <h2 class="text-3xl md:text-4xl text-dark">
               Mujeres fundadoras comprometidas con el cambio social
             </h2>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div
+            <article
               v-for="(member, i) in data.about.team"
               :key="member.name"
               class="flex flex-col items-center text-center border border-dark/5 rounded-xl p-6 md:p-8 hover:border-primary/20 transition-colors"
@@ -299,20 +304,20 @@ const scrollTo = (id) => {
                       i === 0
                         ? 'bg-desert-copper/10 text-desert-copper'
                         : i === 1
-                          ? 'bg-primary/10 text-primary'
+                          ? 'bg-primary-deep/10 text-primary-deep'
                           : 'bg-desert-sand/20 text-desert-gold'
                     "
                     >{{ member.label?.toUpperCase() }}</span
                   >
                 </p>
-                <p class="text-sm text-dark/60 leading-relaxed">
+                <p class="text-sm text-dark/75 leading-relaxed">
                   {{ member.role }}
                 </p>
-                <p class="text-sm text-dark/60 leading-relaxed">
+                <p class="text-sm text-dark/75 leading-relaxed">
                   {{ member.description }}
                 </p>
               </div>
-            </div>
+            </article>
           </div>
         </div>
 
@@ -341,7 +346,7 @@ const scrollTo = (id) => {
         <!-- Pillars -->
         <div class="max-w-2xl mx-auto mb-12 text-center">
           <p
-            class="text-xs font-display font-semibold tracking-[0.15em] text-primary-deep mb-3"
+            class="text-xs font-display font-semibold tracking-[0.15em] text-primary-aaa mb-3"
           >
             {{ data.principles.title }}
           </p>
@@ -366,13 +371,13 @@ const scrollTo = (id) => {
               :class="
                 i % 2 === 0
                   ? 'bg-desert-copper/15 text-desert-copper'
-                  : 'bg-primary/15 text-primary'
+                  : 'bg-primary-deep/15 text-primary-deep'
               "
             >
               <Icon :icon="p.icon" class="text-2xl" aria-hidden="true" />
             </div>
             <h3 class="font-heading text-xl text-dark mb-2">{{ p.title }}</h3>
-            <p class="text-dark/60 text-sm leading-relaxed">
+            <p class="text-dark/75 text-sm leading-relaxed">
               {{ p.description }}
             </p>
           </div>
@@ -384,20 +389,20 @@ const scrollTo = (id) => {
     <section
       id="concurso"
       class="section-padding bg-cream"
-      aria-label="Concurso de dibujo"
+      aria-labelledby="concurso-heading"
     >
       <div class="section-container" data-reveal="concurso">
         <div class="max-w-xl mb-14">
           <span
-            class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-4 py-1.5 rounded-full mb-4"
+            class="inline-flex items-center gap-2 bg-primary/10 text-primary-aaa text-xs font-bold px-4 py-1.5 rounded-full mb-4"
           >
             <Icon icon="ph:palette-fill" class="text-sm" />
             CONCURSO DE DIBUJO
           </span>
-          <h2 class="text-3xl md:text-5xl text-dark leading-[1.1]">
+          <h2 id="concurso-heading" class="text-3xl md:text-5xl text-dark leading-[1.1]">
             {{ data.contest.title }}
           </h2>
-          <p class="text-dark/60 text-sm mt-2 font-medium">
+          <p class="text-dark/75 text-sm mt-2 font-medium">
             {{ data.contest.subtitle }}
           </p>
         </div>
@@ -411,13 +416,13 @@ const scrollTo = (id) => {
             </p>
             <div class="flex flex-wrap gap-4 text-sm">
               <div class="bg-dark/5 rounded-lg px-4 py-2">
-                <span class="text-dark/50 text-xs">Inscripciones</span>
+                <span class="text-dark/70 text-xs">Inscripciones</span>
                 <p class="font-medium text-dark">
                   {{ data.contest.dates.registration }}
                 </p>
               </div>
               <div class="bg-dark/5 rounded-lg px-4 py-2">
-                <span class="text-dark/50 text-xs">Premiación</span>
+                <span class="text-dark/70 text-xs">Premiación</span>
                 <p class="font-medium text-dark">
                   {{ data.contest.dates.award }}
                 </p>
@@ -435,7 +440,7 @@ const scrollTo = (id) => {
             </a>
           </div>
           <div class="border border-dark/5 rounded-xl p-6">
-            <p class="text-sm font-display font-semibold text-primary mb-4">
+            <p class="text-sm font-display font-semibold text-primary-aaa mb-4">
               Categorías
             </p>
             <div class="grid grid-cols-2 gap-3 mb-6">
@@ -444,13 +449,13 @@ const scrollTo = (id) => {
                 :key="cat.id"
                 class="bg-dark/5 rounded-lg p-3 text-center"
               >
-                <p class="font-heading text-lg text-primary">
+                <p class="font-heading text-lg text-primary-deep">
                   Categoría {{ cat.id }}
                 </p>
-                <p class="text-xs text-dark/60">{{ cat.range }}</p>
+                <p class="text-xs text-dark/75">{{ cat.range }}</p>
               </div>
             </div>
-            <p class="text-sm font-display font-semibold text-primary mb-3">
+            <p class="text-sm font-display font-semibold text-primary-aaa mb-3">
               Temáticas
             </p>
             <div class="space-y-2">
@@ -465,7 +470,7 @@ const scrollTo = (id) => {
                 />
                 <div>
                   <p class="text-sm font-medium text-dark">{{ theme.name }}</p>
-                  <p class="text-xs text-dark/60">{{ theme.description }}</p>
+                  <p class="text-xs text-dark/75">{{ theme.description }}</p>
                 </div>
               </div>
             </div>
@@ -474,7 +479,7 @@ const scrollTo = (id) => {
         <div
           class="border border-primary/20 rounded-xl p-6 md:p-8 bg-primary/10"
         >
-          <p class="text-sm font-display font-semibold text-primary mb-4">
+          <p class="text-sm font-display font-semibold text-primary-aaa mb-4">
             Áreas de impacto
           </p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -488,37 +493,42 @@ const scrollTo = (id) => {
               >
                 <Icon
                   icon="ph:flower-fill"
-                  class="text-primary text-lg"
+                  class="text-primary-deep text-lg"
                   aria-hidden="true"
                 />
               </div>
               <p class="font-heading text-lg text-dark mb-1">
                 {{ area.title }}
               </p>
-              <p class="text-xs text-dark/60">{{ area.description }}</p>
-            </div>
+              <p class="text-xs text-dark/75">{{ area.description }}</p>
+              </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ===== PROYECTOS ===== -->
-    <section id="proyectos" class="section-padding" aria-label="Proyectos">
+    <section id="proyectos" class="section-padding" aria-labelledby="proyectos-heading">
       <div class="section-container" data-reveal="proyectos">
         <div class="max-w-xl mb-14">
-          <h2 class="text-3xl md:text-5xl text-dark leading-[1.1]">
+          <p
+            class="text-xs font-display font-semibold tracking-[0.15em] text-primary-aaa mb-3"
+          >
+            PROGRAMAS
+          </p>
+          <h2 id="proyectos-heading" class="text-3xl md:text-5xl text-dark leading-[1.1]">
             Iniciativas que transforman comunidades
           </h2>
-          <p class="text-dark/60 text-sm mt-2">
+          <p class="text-dark/75 text-sm mt-2">
             Conoce nuestros programas activos y próximos lanzamientos.
           </p>
         </div>
-        <div class="space-y-10">
-          <div
-            v-for="project in data.projects"
-            :key="project.title"
-            class="border border-dark/5 rounded-xl p-6 md:p-8"
-          >
+          <div class="space-y-10">
+            <article
+              v-for="project in data.projects"
+              :key="project.title"
+              class="border border-dark/5 rounded-xl p-6 md:p-8"
+            >
             <span
               class="inline-block bg-desert-copper/10 text-desert-copper text-xs font-semibold px-3 py-1 rounded-full mb-3"
               >{{ project.year }}</span
@@ -557,7 +567,7 @@ const scrollTo = (id) => {
 
             <!-- Roadmap (Raíces Vivas) -->
             <div v-if="project.roadmap" class="mb-5">
-              <p class="text-sm font-display font-semibold text-dark/50 mb-3">
+              <p class="text-sm font-display font-semibold text-dark/70 mb-3">
                 Hoja de ruta
               </p>
               <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -566,7 +576,7 @@ const scrollTo = (id) => {
                   :key="step.period"
                   class="bg-dark/5 rounded-lg p-3 text-center"
                 >
-                  <p class="text-[10px] text-dark/50 font-medium">
+                  <p class="text-[10px] text-dark/70 font-medium">
                     {{ step.period }}
                   </p>
                   <p class="text-sm font-medium text-dark mt-1">
@@ -578,7 +588,7 @@ const scrollTo = (id) => {
 
             <!-- Benefits (Raíces Vivas) -->
             <div v-if="project.benefits" class="mb-4">
-              <p class="text-sm font-display font-semibold text-dark/50 mb-3">
+              <p class="text-sm font-display font-semibold text-dark/70 mb-3">
                 Beneficios
               </p>
               <div class="space-y-3">
@@ -589,11 +599,11 @@ const scrollTo = (id) => {
                 >
                   <Icon
                     icon="ph:check-circle-fill"
-                    class="text-primary text-lg mt-0.5 flex-shrink-0"
+                    class="text-primary-deep text-lg mt-0.5 flex-shrink-0"
                   />
                   <div>
                     <p class="font-medium text-dark text-sm">{{ b.title }}</p>
-                    <p class="text-dark/60 text-xs">{{ b.description }}</p>
+                    <p class="text-dark/75 text-xs">{{ b.description }}</p>
                   </div>
                 </div>
               </div>
@@ -612,7 +622,7 @@ const scrollTo = (id) => {
                 <p class="font-heading text-lg text-dark mb-1">
                   {{ area.title }}
                 </p>
-                <p class="text-dark/60 text-xs">{{ area.description }}</p>
+                <p class="text-dark/75 text-xs">{{ area.description }}</p>
               </div>
             </div>
 
@@ -623,7 +633,7 @@ const scrollTo = (id) => {
             >
               Lanzamiento: {{ project.launch }}
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -632,14 +642,14 @@ const scrollTo = (id) => {
     <section
       id="voluntariado"
       class="section-padding bg-[#D6F0EB]"
-      aria-label="Voluntariado"
+      aria-labelledby="voluntariado-heading"
     >
       <div class="section-container" data-reveal="voluntariado">
         <div class="max-w-2xl mx-auto text-center mb-12">
-          <h2 class="text-3xl md:text-5xl text-dark leading-[1.1] mb-4">
+          <h2 id="voluntariado-heading" class="text-3xl md:text-5xl text-dark leading-[1.1] mb-4">
             {{ data.volunteer.title }}
           </h2>
-          <p class="text-dark/60 text-sm font-medium mb-4">
+          <p class="text-dark/75 text-sm font-medium mb-4">
             {{ data.volunteer.subtitle }}
           </p>
           <p class="text-dark/80 leading-relaxed">
@@ -664,7 +674,7 @@ const scrollTo = (id) => {
             <h3 class="font-heading text-lg text-dark mb-2">
               {{ area.title }}
             </h3>
-            <p class="text-dark/60 text-xs leading-relaxed">
+            <p class="text-dark/75 text-xs leading-relaxed">
               {{ area.description }}
             </p>
           </div>
@@ -695,7 +705,7 @@ const scrollTo = (id) => {
     <section
       id="contacto"
       class="relative bg-[#F5F0E8] text-dark section-padding overflow-hidden"
-      aria-label="Contacto"
+      aria-labelledby="contacto-heading"
     >
       <div
         aria-hidden="true"
@@ -709,10 +719,10 @@ const scrollTo = (id) => {
           <!-- Info -->
           <div class="space-y-8">
             <div>
-              <h2 class="text-3xl md:text-5xl text-dark leading-[1.1]">
+              <h2 id="contacto-heading" class="text-3xl md:text-5xl text-dark leading-[1.1]">
                 Hablemos
               </h2>
-              <p class="text-dark/60 mt-4 text-sm max-w-sm leading-relaxed">
+              <p class="text-dark/75 mt-4 text-sm max-w-sm leading-relaxed">
                 {{ data.contact.message }}
               </p>
             </div>
@@ -737,10 +747,10 @@ const scrollTo = (id) => {
                   :icon="info.icon"
                   class="text-lg flex-shrink-0"
                   aria-hidden="true"
-                  :class="idx === 1 ? 'text-desert-gold' : 'text-primary'"
+                  :class="idx === 1 ? 'text-desert-gold' : 'text-primary-deep'"
                 />
                 <div>
-                  <p class="text-dark/60 text-xs font-medium">
+                  <p class="text-dark/75 text-xs font-medium">
                     {{ info.label }}
                   </p>
                   <p class="text-dark/80 text-sm">{{ info.value }}</p>
@@ -751,11 +761,11 @@ const scrollTo = (id) => {
 
           <!-- Form -->
           <div>
-            <form @submit="onContactSubmit" novalidate class="space-y-5">
+            <form @submit="onContactSubmit" novalidate class="space-y-4" aria-label="Formulario de contacto">
               <div>
                 <label
                   for="cNombre"
-                  class="block text-xs font-display font-semibold tracking-wider text-dark/50 mb-2"
+                  class="block text-xs font-display font-semibold tracking-wider text-dark/70 mb-2"
                   >NOMBRE</label
                 >
                 <input
@@ -763,7 +773,7 @@ const scrollTo = (id) => {
                   v-model="cNombre"
                   @blur="cNomBlur"
                   placeholder="Tu nombre"
-                  class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3.5 text-sm text-dark placeholder-dark/30 outline-none transition-colors focus:border-primary focus:bg-white"
+                  class="w-full bg-white border border-dark/10 rounded-xl px-4 py-4 text-sm text-dark placeholder-dark/30 outline-none transition-colors focus:border-primary focus:bg-white"
                   :class="cNomErr && cNomTouch ? 'border-red-400' : ''"
                   :aria-invalid="cNomErr && cNomTouch ? 'true' : 'false'"
                   :aria-describedby="
@@ -773,7 +783,7 @@ const scrollTo = (id) => {
                 <p
                   v-if="cNomErr && cNomTouch"
                   id="cNombre-err"
-                  class="text-red-500 text-xs mt-1.5"
+                  class="text-red-500 text-xs mt-2"
                   role="alert"
                 >
                   {{ cNomErr }}
@@ -782,7 +792,7 @@ const scrollTo = (id) => {
               <div>
                 <label
                   for="cEmail"
-                  class="block text-xs font-display font-semibold tracking-wider text-dark/50 mb-2"
+                  class="block text-xs font-display font-semibold tracking-wider text-dark/70 mb-2"
                   >EMAIL</label
                 >
                 <input
@@ -791,7 +801,7 @@ const scrollTo = (id) => {
                   @blur="cEmailBlur"
                   type="email"
                   placeholder="tu@correo.cl"
-                  class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3.5 text-sm text-dark placeholder-dark/30 outline-none transition-colors focus:border-primary focus:bg-white"
+                  class="w-full bg-white border border-dark/10 rounded-xl px-4 py-4 text-sm text-dark placeholder-dark/30 outline-none transition-colors focus:border-primary focus:bg-white"
                   :class="cEmailErr && cEmailTouch ? 'border-red-400' : ''"
                   :aria-invalid="cEmailErr && cEmailTouch ? 'true' : 'false'"
                   :aria-describedby="
@@ -801,7 +811,7 @@ const scrollTo = (id) => {
                 <p
                   v-if="cEmailErr && cEmailTouch"
                   id="cEmail-err"
-                  class="text-red-500 text-xs mt-1.5"
+                  class="text-red-500 text-xs mt-2"
                   role="alert"
                 >
                   {{ cEmailErr }}
@@ -810,7 +820,7 @@ const scrollTo = (id) => {
               <div>
                 <label
                   for="cMensaje"
-                  class="block text-xs font-display font-semibold tracking-wider text-dark/50 mb-2"
+                  class="block text-xs font-display font-semibold tracking-wider text-dark/70 mb-2"
                   >MENSAJE</label
                 >
                 <textarea
@@ -819,7 +829,7 @@ const scrollTo = (id) => {
                   @blur="cMenBlur"
                   placeholder="Escribe tu mensaje..."
                   rows="5"
-                  class="w-full bg-white border border-dark/10 rounded-xl px-4 py-3.5 text-sm text-dark placeholder-dark/30 outline-none transition-colors focus:border-primary focus:bg-white resize-none"
+                  class="w-full bg-white border border-dark/10 rounded-xl px-4 py-4 text-sm text-dark placeholder-dark/30 outline-none transition-colors focus:border-primary focus:bg-white resize-none"
                   :class="cMenErr && cMenTouch ? 'border-red-400' : ''"
                   :aria-invalid="cMenErr && cMenTouch ? 'true' : 'false'"
                   :aria-describedby="
@@ -829,7 +839,7 @@ const scrollTo = (id) => {
                 <p
                   v-if="cMenErr && cMenTouch"
                   id="cMensaje-err"
-                  class="text-red-500 text-xs mt-1.5"
+                  class="text-red-500 text-xs mt-2"
                   role="alert"
                 >
                   {{ cMenErr }}
@@ -849,15 +859,15 @@ const scrollTo = (id) => {
                 >
                   <Icon
                     icon="ph:check-circle-fill"
-                    class="text-primary text-3xl mb-2"
+                    class="text-primary-deep text-3xl mb-2"
                     aria-hidden="true"
                   />
                   <p class="text-dark font-semibold">¡Mensaje enviado!</p>
-                  <p class="text-dark/60 text-sm mt-1">
+                  <p class="text-dark/75 text-sm mt-1">
                     Te responderemos a la brevedad.
                   </p>
                   <button
-                    class="text-primary text-sm mt-3 underline underline-offset-2"
+                    class="text-primary-deep text-sm mt-3 underline underline-offset-2"
                     @click="contactStore.resetStatus()"
                   >
                     Enviar otro
@@ -875,7 +885,7 @@ const scrollTo = (id) => {
               <button
                 type="submit"
                 :disabled="contactStore.submitting"
-                class="w-full bg-primary text-dark font-semibold rounded-xl px-6 py-3.5 text-sm transition-all hover:bg-primary-light disabled:opacity-40"
+                class="w-full bg-primary text-dark font-semibold rounded-xl px-6 py-4 text-sm transition-all hover:bg-primary-light disabled:opacity-40"
                 :aria-busy="contactStore.submitting"
               >
                 {{ contactStore.submitting ? "Enviando..." : "Enviar Mensaje" }}

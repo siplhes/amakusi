@@ -29,7 +29,7 @@ const emit = defineEmits(["click"]);
 const sizeClasses = {
   sm: "px-5 py-2 text-xs",
   md: "px-7 py-3 text-sm",
-  lg: "px-9 py-3.5 text-base",
+  lg: "px-8 py-4 text-base",
 };
 
 const variantClasses = {
@@ -39,7 +39,7 @@ const variantClasses = {
   desert:
     "bg-desert-sand text-dark hover:bg-desert-gold active:bg-desert-copper shadow-lg shadow-desert-sand/25",
   outline:
-    "border-2 border-primary text-primary hover:bg-primary hover:text-dark active:bg-primary-light",
+    "border-2 border-primary text-primary-deep hover:bg-primary hover:text-dark active:bg-primary-light",
   ghost: "text-white/80 hover:bg-white/10 hover:text-white active:bg-white/20",
 };
 </script>

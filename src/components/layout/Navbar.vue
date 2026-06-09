@@ -76,7 +76,6 @@ const mobileToggleLabel = computed(() =>
           </button>
 
           <nav
-            role="navigation"
             aria-label="Navegación principal"
             class="hidden md:flex items-center gap-6"
           >
@@ -119,19 +118,18 @@ const mobileToggleLabel = computed(() =>
         leave-from-class="opacity-100 translate-y-0"
         leave-to-class="opacity-0 -translate-y-4"
       >
-        <div
+        <nav
           v-if="isOpen"
           id="mobile-menu"
-          class="bg-black border-t border-white/5 overflow-hidden"
-          role="navigation"
           aria-label="Navegación móvil"
+          class="bg-black border-t border-white/5 overflow-hidden"
         >
           <div class="max-w-5xl mx-auto px-6 py-4 space-y-1">
             <button
               v-for="s in sections"
               :key="s.id"
               @click="scrollTo(s.id)"
-              class="block w-full text-left px-4 py-3.5 rounded-lg text-sm transition-colors min-h-[44px]"
+              class="block w-full text-left px-4 py-4 rounded-lg text-sm transition-colors min-h-[44px]"
               :class="
                 activeSection === s.id
                   ? 'text-primary bg-primary/5'
@@ -141,7 +139,7 @@ const mobileToggleLabel = computed(() =>
               {{ s.label }}
             </button>
           </div>
-        </div>
+        </nav>
       </Transition>
     </div>
   </header>
