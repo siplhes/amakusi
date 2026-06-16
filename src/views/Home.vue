@@ -326,8 +326,8 @@ const scrollTo = (id) => {
           class="relative h-48 md:h-64 rounded-xl overflow-hidden mb-20 bg-dark/5"
         >
           <img
-            src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1600&q=80"
-            alt="Vista panorámica del Desierto de Atacama al atardecer"
+            src="https://www.gochile.cl/fotos/full/107646-valle-de-la-luna-1.jpg"
+            alt="Valle de la Luna, San Pedro de Atacama"
             loading="lazy"
             class="w-full h-full object-cover"
           />
@@ -339,7 +339,7 @@ const scrollTo = (id) => {
             aria-hidden="true"
             class="absolute bottom-4 left-4 text-white/50 text-xs"
           >
-            Desierto de Atacama, Chile
+            Valle de la Luna, San Pedro de Atacama
           </p>
         </div>
 
@@ -548,7 +548,7 @@ const scrollTo = (id) => {
               "
               class="bg-primary/[0.04] rounded-xl p-4 md:p-5 mb-5"
             >
-              <p class="text-dark/70 text-sm leading-relaxed">
+              <p class="text-dark/70 bg-primary/50 rounded-lg p-4 text-sm leading-relaxed">
                 {{ project.longDescription }}
               </p>
             </div>
@@ -556,13 +556,13 @@ const scrollTo = (id) => {
             <!-- Quote (Raíces Vivas) -->
             <div
               v-if="project.quote"
-              class="bg-primary/5 rounded-xl p-5 mb-5 text-center"
+              class="bg-primary/50 rounded-xl p-5 mb-5 text-center"
             >
               <Icon
                 icon="ph:quotes-fill"
-                class="text-primary/30 text-xl mx-auto mb-2"
+                class="text-primary text-xl mx-auto mb-2"
               />
-              <p class="italic text-dark/80 text-sm">"{{ project.quote }}"</p>
+              <p class="italic text-dark/90 text-sm">"{{ project.quote }}"</p>
             </div>
 
             <!-- Roadmap (Raíces Vivas) -->
@@ -617,12 +617,12 @@ const scrollTo = (id) => {
               <div
                 v-for="area in project.areas"
                 :key="area.title"
-                class="bg-dark/5 rounded-xl p-4 text-center"
+                class="bg-primary/50 rounded-xl p-4 text-center"
               >
                 <p class="font-heading text-lg text-dark mb-1">
                   {{ area.title }}
                 </p>
-                <p class="text-dark/75 text-xs">{{ area.description }}</p>
+                <p class="text-dark/100 text-xs">{{ area.description }}</p>
               </div>
             </div>
 
@@ -641,18 +641,23 @@ const scrollTo = (id) => {
     <!-- ===== SÚMATE AL CAMBIO ===== -->
     <section
       id="voluntariado"
-      class="section-padding bg-[#D6F0EB]"
+      class="section-padding bg-primary-deep"
       aria-labelledby="voluntariado-heading"
     >
       <div class="section-container" data-reveal="voluntariado">
         <div class="max-w-2xl mx-auto text-center mb-12">
-          <h2 id="voluntariado-heading" class="text-3xl md:text-5xl text-dark leading-[1.1] mb-4">
+          <p
+            class="text-xs font-display font-semibold tracking-[0.15em] text-white/60 mb-3"
+          >
+            VOLUNTARIADO
+          </p>
+          <h2 id="voluntariado-heading" class="text-3xl md:text-5xl text-white leading-[1.1] mb-4">
             {{ data.volunteer.title }}
           </h2>
-          <p class="text-dark/75 text-sm font-medium mb-4">
+          <p class="text-white/70 text-sm font-medium mb-4">
             {{ data.volunteer.subtitle }}
           </p>
-          <p class="text-dark/80 leading-relaxed">
+          <p class="text-white/75 leading-relaxed">
             {{ data.volunteer.description }}
           </p>
         </div>
@@ -660,33 +665,28 @@ const scrollTo = (id) => {
           <div
             v-for="(area, i) in data.volunteer.areas"
             :key="area.title"
-            class="rounded-xl p-6 md:p-8 transition-all duration-300 hover:-translate-y-0.5"
-            :class="
-              i % 2 === 0
-                ? 'bg-desert-sand/10 border border-desert-sand/20'
-                : 'border border-dark/5 hover:border-desert-sand/30 hover:shadow-sm'
-            "
+            class="bg-[#B0E1CE] rounded-xl p-6 md:p-8 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
           >
             <Icon
               icon="ph:hand-heart-fill"
-              class="text-2xl text-desert-copper mx-auto mb-3"
+              class="text-2xl text-primary-deep mx-auto mb-3"
             />
             <h3 class="font-heading text-lg text-dark mb-2">
               {{ area.title }}
             </h3>
-            <p class="text-dark/75 text-xs leading-relaxed">
+            <p class="text-dark/70 text-xs leading-relaxed">
               {{ area.description }}
             </p>
           </div>
         </div>
         <div
-          class="max-w-xl mx-auto text-center bg-desert-sand text-dark rounded-2xl p-8 md:p-10"
+          class="max-w-xl mx-auto text-center bg-white/15 backdrop-blur-sm rounded-2xl p-8 md:p-10"
         >
           <Icon
             icon="ph:sparkle-fill"
-            class="text-3xl text-desert-gold mx-auto mb-4"
+            class="text-3xl text-desert-sand mx-auto mb-4"
           />
-          <p class="text-dark/90 leading-relaxed text-sm md:text-base italic">
+          <p class="text-white/85 leading-relaxed text-sm md:text-base italic">
             "{{ data.volunteer.callToAction }}"
           </p>
           <AppButton

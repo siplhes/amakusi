@@ -106,7 +106,7 @@ const socialLinks = [
           <a
             href="https://siplhes.vercel.app/"
             target="_blank"
-            class="hover:text-primary transition-colors text-xs font-mono"
+            class="hover:text-primary transition-colors text-xs font-mono bg"
             >Siplhes</a
           >
         </p>
